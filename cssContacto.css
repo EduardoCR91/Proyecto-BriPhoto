@@ -1,0 +1,419 @@
+
+:root{
+    --white:#ffffff;
+    --black: #000000;
+    --dark-gray:rgb(53, 53, 53);
+    --gray:rgb(173, 173, 173);
+    --golden:rgb(252, 181, 2);
+    --sm:10px;
+    --md:15px;
+    --lg:20px;
+    --titulos:'Bai Jamjuree';
+    --textos:'Baloo 2';
+}
+
+body{
+    display: grid;
+    height: 1400px;
+    grid-template-rows:5% 35% 60%;
+    margin: 0;
+    justify-items: center;
+    align-items: center;
+    
+
+}
+
+/******************Primer seccion-Barra de navegacion/******************/
+
+.barra-nav{
+    grid-row: 1;
+    width: 80%;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+}
+.menu img {
+    width: 10%;
+    height: auto;
+}
+.menu{
+    width: 80%;
+    height: 12%;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    background-color: var(--dark-gray);
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0;
+}
+
+.menu ul li{
+    display: inline-block;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--lg);
+    font-weight: 200;
+    font-family: var(--titulos);
+    background-color: var(--dark-gray);
+    padding-left: 80px;
+}
+
+.menu ul li a:hover{
+    text-decoration: none;
+    color: var(--golden);
+}
+
+.menu .submenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    z-index: 10;
+}
+.menu ul li:hover .submenu {
+    display: block;
+    padding-left: 60px;
+}
+.menu .submenu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px;
+    white-space: nowrap;
+    width: 220px;
+}
+
+
+/****************Primera seccion de contacto***************/
+
+.first{
+    display: flex;
+    grid-row: 2/3;
+    width: 65%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8 )),url("/IMG principal/camera.webp");
+    background-size: 100vmax;
+    background-position: center;
+    flex-direction: column;
+    padding-right: 15%;
+    padding-bottom: 15%;
+    margin: 0;
+    margin-top: 12%;
+    justify-content: center;
+    align-items: center;
+}
+.first h1{
+    text-align: center;
+    font-family: var(--titulos);
+    font-size: 40px;
+    color: var(--white);
+}
+.first p{
+    text-align: justify;
+    color: var(--white);
+    font-size: var(--lg);
+    font-family: var(--textos);
+    width: 60%;
+    
+}
+
+
+
+
+/****************Segunda seccion de contacto***************/
+
+.middle{
+    grid-row: 3/4;
+    background-color: var(--black);
+    display: flex;
+    width: 80%;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+/****************Seccion de Formulario***************/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 90%;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3%;
+    margin: 10px;
+    background-color: var(--dark-gray);
+    border-radius: 15px;
+}
+.form h3{
+    width: 100%;
+    font-family: var(--titulos);
+    font-size: var(--lg);
+    text-align: center;
+    color: var(--golden);
+}
+.form h1{
+    width: 100%;
+    font-family: var(--titulos);
+    font-size: 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+}
+.form label{
+    padding-left: 5px;
+    font-family: var(--textos);
+    font-size: var(--md);
+    color: var(--gray);
+}
+
+.form input{
+    width: 100%;
+    height: 30px;
+    margin-right: 5%;
+    font-family: var(--textos);
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.form #message{
+    margin-bottom: 20px;
+    height: 30%;
+    text-align: center;
+}
+
+.form button{
+    margin-top: 30px;
+}
+
+.form #btn-message{
+    height: 10%;
+    border-radius: 25px;
+    border: 2px solid white;
+    color: var(--white);
+    background-color: var(--dark-gray);
+    font-size: var(--md);
+    font-family: var(--textos);
+    cursor: pointer;
+}
+
+.form #btn-message:hover{
+    font-size: var(--lg);
+}
+
+#feedback{
+    display: none; 
+    color: var(--white);
+    font-family: var(--textos);
+    font-size: var(--lg);
+}
+
+
+/****************Seccion derecha de texto***************/
+
+.text-logos{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: var(--black);
+    margin: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.texto-creativo{
+    height: 50%;
+    padding-top: 15%;
+}
+
+.text-logos h1{
+    width: 100%;
+    height: auto;
+    font-family: var(--titulos);
+    color: var(--golden);
+    font-size: var(--lg);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text-logos p{
+    width: 100%;
+    height: 40%;
+    font-family: var(--textos);
+    color: var(--white);
+    font-size: var(--lg);
+    text-align: justify;
+}
+
+/****************Seccion derecha de redes***************/
+.text-logos img{
+    width: 20%;
+    background-color: var(--gray);
+}
+
+.text-logos ul{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--gray);
+    height: 40%;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+.text-logos ul li{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.text-logos li a{
+    font-size: var(--md);
+    font-family: var(--textos);
+    text-align: center;display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+
+/******************Ultima seccion del Footer/******************/
+
+footer{
+    display: flex;
+    background-color: var(--dark-gray);
+    width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.footer p{
+    margin: 3px;
+    color: var(--white);
+    text-align: center;
+    font-size: var(--md);
+    font-family: var(--textos);
+}
+
+@media (max-width: 800px){
+    .barra-nav{
+        display: flex;
+        grid-row: 1;
+        width: 80%;
+        height: 100%;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .menu img {
+        display: none;
+        width: 10%;
+        height: auto;
+    }
+    .menu{
+        width: 80%;
+        height: 12%;
+        display: flex;
+        position: fixed;
+        z-index: 2;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+    }
+    
+    .menu ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        list-style: none;
+        background-color: var(--dark-gray);
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 15px;
+        padding: 0;
+    }
+    
+    .menu ul li{
+        display: inline-block;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .menu ul li a{
+        text-decoration: none;
+        color: var(--white);
+        font-size: var(--lg);
+        font-weight: 200;
+        font-family: var(--titulos);
+        background-color: var(--dark-gray);
+        padding: 0;
+    }
+    
+    .menu ul li a:hover{
+        text-decoration: none;
+        color: var(--golden);
+    }
+    
+    .menu .submenu{
+        display: none;
+        
+        top: 100%;
+        list-style: none;
+        z-index: 10;
+    }
+    .menu ul li:hover .submenu {
+        display: block;
+        padding-left: 10%;
+        position: absolute;
+    }
+    .menu .submenu li a {
+        display: block;
+        text-decoration: none;
+        color: var(--white);
+        padding: 5px;
+        white-space: nowrap;
+        width: 220px;
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="/cssContacto.css">
+</head>
+<body>
+
+    <!--Barra de navegacion general para todas las paginas-->
+
+    <section class="barra-nav">
+        <nav class="menu">
+            <ul>
+                <img src="/IMG principal/LOGO_BLANCO_BRI.webp" alt="logo">
+                <li><a href="/" id="servicios">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="/Audiovisual.html">Produccion audiovisual</a></li>
+                        <li><a href="/Fotografia.html">Fotografia</a></li>
+                        <li><a href="Locucion.html">Locucion comercial</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Home.html">Quiénes somos</a></li>
+                <li><a href="/Contact.html">Contactenos</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="first">
+        <h1>Contactanos</h1>
+        <p>Cada miembro de nuestro equipo es una pieza clave de un 
+            rompecabezas creativo, y juntos, creamos obras que no solo se ven, 
+            sino que se sienten. ¡Estamos listos para acompañarte en esta emocionante 
+            travesía!</p>
+    </section>
+
+    <section class="middle">
+        <div class="form">
+            
+            <h1>Ponte en contacto</h1>
+            <form action="submit" id="contactForm">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Escribe tu nombre">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Correo electronico">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" placeholder="Asunto del mensaje">
+                <label for="message">Mensaje</label>
+                <textarea id="message" placeholder="Contenido del mensaje"></textarea>
+                <button type="button" id="btn-message" >Enviar ahora</button>
+            </form>
+            <p id="feedback">¡Tu mensaje ha sido enviado correctamente!</p>
+        </div>
+
+        <div class="text-logos">
+
+            <div class="texto-creativo">
+                <h1>Conoce a Nuestro Equipo Soñado</h1>
+
+                <p>
+                    En Briphotofilms, no solo somos un equipo; somos una familia de soñadores, 
+                    creadores y narradores. Cada miembro aporta su chispa única, 
+                    formando un mosaico de talento que transforma ideas en realidades visuales 
+                    deslumbrantes.
+                    
+                </p>
+            </div>
+    
+            <ul>
+                <li id="instagram">
+                    <a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank">@briphotofilms 
+                        <img src="/IMG principal/instagram.webp" alt="logo-instagram">
+                    </a> 
+                    
+                </li>
+                <li id="facebook">
+                    <a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank">@briphotofilms
+                        <img src="/IMG principal/face.webp" alt="logo-facebook">
+                    </a>
+                </li>
+                <li id="wapp">
+                    <a href="https://wa.me/+573503742323" target="_blank">+573503742323
+                        <img src="/IMG principal/wapp.webp" alt="logo-wapp">
+                    </a>                
+                </li>
+                <li id="email">
+                    <a href="mailto:briPhothofilms@outlook.com" target="_blank">briPhothofilms@outlook.com
+                        <img src="/IMG principal/email.webp" alt="logo-email">
+                    </a>                
+                </li>
+            </ul>
+    
+        </div>
+
+    </section>
+
+
+</body>
+
+<script>
+    document.getElementById('btn-message').addEventListener('click', function () {
+    // Obtener los valores de los campos
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Validar que los campos no estén vacíos
+    if (name === '' || email === '' || subject === '' || message === '') {
+        alert('Por favor, completa todos los campos antes de enviar.');
+        return;
+    }
+
+    // Mostrar mensaje de confirmación
+    const feedback = document.getElementById('feedback');
+    feedback.style.display = 'block';
+
+    // Limpiar el formulario
+    document.getElementById('contactForm').reset();
+
+    // Ocultar el mensaje después de 5 segundos
+    setTimeout(() => {
+        feedback.style.display = 'none';
+    }, 5000);
+});
+</script>
+
+<footer>
+    <!--En el footer tenemos la informacion de contacto-->
+
+   <div class="footer">
+               <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban León - Wilson Andres Carmona</p>
+           <section id="Contacto">
+                   <p>carlos.cruzr@uniagustiniana.edu.co</p>
+           </section>
+               <p>Universitaria Agustiniana</p>
+               <p>Tecnologia en desarrollo de software</p>
+   </div>            
+</footer>
+</html>
