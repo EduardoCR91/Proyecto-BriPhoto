@@ -1,0 +1,448 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --white:#ffffff;
+    --black: #000000;
+    --dark-gray:rgb(53, 53, 53);
+    --gray:rgb(173, 173, 173);
+    --golden:rgb(252, 181, 2);
+    --sm:10px;
+    --md:15px;
+    --lg:20px;
+    --titulos:'Bai Jamjuree';
+    --textos:'Baloo 2';
+}
+body{
+    font-family: var(--textos);
+    justify-items: center;
+    align-items: center;
+}
+/*Menu navegacion*/
+.barra-nav{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+}
+
+.menu img {
+    width: 10%;
+    height: auto;
+}
+.menu{
+    width: 80%;
+    height: 12%;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    background-color: var(--dark-gray);
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0;
+}
+
+.menu ul li{
+    display: inline-block;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--lg);
+    font-weight: 200;
+    font-family: var(--titulos);
+    background-color: var(--dark-gray);
+    padding-left: 80px;
+}
+
+.menu ul li a:hover{
+    text-decoration: none;
+    color: var(--golden);
+}
+
+.menu .submenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    z-index: 10;
+}
+.menu ul li:hover .submenu {
+    display: block;
+    padding-left: 60px;
+}
+.menu .submenu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px;
+    white-space: nowrap;
+    width: 220px;
+}
+
+/* .menu li a:hover{
+    color: var(--golden);
+    transition: 0.5s ease-in-out;
+} */
+/* Cuerpo pagina*/
+
+.fantasma{
+    display: block;
+    height:88.6px;
+    width: 80%;
+}
+.fondoComercial{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo2.jpg");
+    background-size: cover;
+    width: 80%;
+}
+.FondoSocial{
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual//img/fondo3.jpg");
+    background-size: 100vmax;
+    background-position: center;
+}
+.fondovideo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -10;
+}
+/*Carrusel*/
+#ContenedorCarrusel{
+    position: relative;
+    height: 50%;
+    width: 36%;
+    min-width: 360px;
+    overflow: hidden;
+}
+.carruceles{
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.Slider{
+    width: calc(100/3);
+    height: 100%;
+}
+.Slider video{
+    object-fit: cover;
+    min-width: 360px;
+    width: 100%;
+    height: 100%;
+}
+.boton_izq,.boton_der{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--golden);
+    transform: translate(0.-50%);
+    transition: .5 ease;
+    user-select: none;
+}
+.boton_izq{
+left: 10px;
+}
+.boton_der{
+right: 10px;
+}
+/*Empresarial 1*/
+.TituloComercial{
+    width: 100%;
+    height: 50px;
+    padding-top: 40px;
+    text-align: center;
+}
+.TituloComercial h2{
+    font-family: var(--titulos);
+    font-size: var(--lg);
+    color: var(--golden);
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+}
+.Empresarial_1{
+    /*width: 80%;*/
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.DescripcionEmpresarial{
+    /*Para modificar el contenedor*/
+    display: flex;
+    width:40%;
+    height:50%;
+    min-width: 35%;
+    border: solid 1px var(--white);
+    border-radius: 10px;
+    /*para el texto*/
+    align-items: center;
+    justify-content: center;
+}
+.DescripcionEmpresarial p{
+    /*para el texto*/
+    display: inline-block;
+    font-size: var(--lg);
+    font-family: var(--textos);
+    color: var(--white);
+    text-align: center;
+    vertical-align: middle;
+}
+/*Empresarial 2*/
+.Empresarial_2{
+    height: 400px;
+    text-align: center;
+  /*background-color:var(--black);*/
+}
+.Empresarial_2 h2{
+    display: block;
+    width: 100%;
+    color: var(--white);
+}
+.ContenedorMarcas{
+width: 100%;
+height: inherit;
+display: flex;
+justify-content: space-around;
+padding-top: 20px;
+}
+.marcas{
+    width: 200px;
+    height: 240px;
+    border-radius: 15px;
+    border: solid 2px var(--white);
+    overflow: hidden;
+}
+.marcas img{
+    width: 200px;
+    height: 200px;
+}
+.marcas h4{
+    display: block;
+    width: 200px;
+    color: var(--white);
+}
+/*Social 1*/
+.TituloSocial h2{
+    font-family: var(--titulos);
+    font-size: var(--lg);
+    color: var(--golden);
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 2px;
+    display: inline-block;
+}
+.Social_1{
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.TituloSocial{
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    text-justify: auto;
+}
+.DescripcionSocial{
+    display: flex;
+    width:40%;
+    height:50%;
+    border: solid 1px var(--white);
+    border-radius: 10px;
+    /*para el texto*/
+    align-items: center;
+    justify-content: center;
+    font-size: var(--lg);
+    font-family: var(--textos);
+    color: var(--white);
+    text-align: center;
+}
+/*Social 2*/
+.Social_2{
+    width: 100%;
+    height: 400px;
+}
+/*Footer*/
+footer{
+    display: flex;
+    background-color: var(--dark-gray);
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.footer p{
+    margin: 3px;
+    color: var(--white);
+    text-align: center;
+    font-size: var(--md);
+    font-family: var(--textos);
+}
+/*Media Querys*/
+/*Menu*/
+@media (max-width: 800px){
+    .barra-nav{
+        display: flex;
+        grid-row: 1;
+        width: 80%;
+        height: 100%;
+        align-self: center;
+        justify-content: center;
+    }
+    
+    .menu img {
+        display: none;
+        width: 10%;
+        height: auto;
+    }
+    .menu{
+        width: 80%;
+        height: 12%;
+        display: flex;
+        position: fixed;
+        z-index: 2;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+    }
+    
+    .menu ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        list-style: none;
+        background-color: var(--dark-gray);
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 15px;
+        padding: 0;
+    }
+    
+    .menu ul li{
+        display: inline-block;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    .menu ul li a{
+        text-decoration: none;
+        color: var(--white);
+        font-size: var(--lg);
+        font-weight: 200;
+        font-family: var(--titulos);
+        background-color: var(--dark-gray);
+        padding: 0;
+    }
+    
+    .menu ul li a:hover{
+        text-decoration: none;
+        color: var(--golden);
+    }
+    
+    .menu .submenu{
+        display: none;
+        
+        top: 100%;
+        list-style: none;
+        z-index: 10;
+    }
+    .menu ul li:hover .submenu {
+        display: block;
+        padding-left: 10%;
+        position: absolute;
+    }
+    .menu .submenu li a {
+        display: block;
+        text-decoration: none;
+        color: var(--white);
+        padding: 5px;
+        white-space: nowrap;
+        width: 220px;
+    }
+}
+@media screen and (max-width:860px){
+    p{
+        font-size: var(--md);
+    }
+    .Empresarial_1{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10%;
+    }
+    .DescripcionEmpresarial{
+        margin-top: 20px;
+    }
+    /*empresarial2*/
+    .Empresarial_2 h2{
+        margin-top: 20px;
+    }
+    .ContenedorMarcas{
+        align-items: center;
+        justify-content: center;
+    }
+    .marcas{
+        width: 100px;
+        height: 140px;
+    }
+    .marcas img{
+        width: 100px;
+        height: 100px;
+    }
+    .Social_1{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding:auto;
+    }
+    #ContenedorCarrusel{
+        width:80%;
+    }
+    .DescripcionEmpresarial{
+        width: 80%;
+    }
+    .DescripcionSocial{
+        width: 80%;
+    }
+}
