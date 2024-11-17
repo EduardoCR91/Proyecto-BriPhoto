@@ -445,6 +445,9 @@ footer{
     .form form{
         font-size: var(--md);
     }
+    .form input, .form textarea{
+        width: 95%;
+    }
     .text-logos{
         display: flex;
         flex-direction: column;
