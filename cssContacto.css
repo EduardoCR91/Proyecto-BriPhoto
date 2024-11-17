@@ -335,6 +335,8 @@ footer{
     font-family: var(--textos);
 }
 
+/******************Secciones de media querys/******************/
+
 @media (max-width: 800px){
     .barra-nav{
         display: flex;
@@ -384,7 +386,7 @@ footer{
     .menu ul li a{
         text-decoration: none;
         color: var(--white);
-        font-size: var(--lg);
+        font-size: var(--md);
         font-weight: 200;
         font-family: var(--titulos);
         background-color: var(--dark-gray);
@@ -415,5 +417,64 @@ footer{
         padding: 5px;
         white-space: nowrap;
         width: 220px;
+    }
+    .first{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        padding: 0;
+        margin: 0;
+        background-size: 100vmax;
+        background-position: center;
+    }
+    .first h1, .first p{
+        font-size: var(--md);
+    }
+    .middle{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+    }
+    .form{
+        width: 90%;
+    }
+    .form h1{
+        font-size: var(--lg);
+    }
+    .form form{
+        font-size: var(--md);
+    }
+    .text-logos{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .texto-creativo h1{
+        font-size: var(--lg);
+    }
+    .texto-creativo p{
+        font-size: var(--md);
+    }
+    .text-logos img{
+        width: 10%;
+    }
+    .texto-creativo{
+        padding: 0;
+        height: 80%;
+    }
+    .text-logos ul{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: var(--gray);
+        height: 20%;
+        width: 100%;
+        padding: 0;
+        justify-content: space-between;
+        border-radius: 15px;
+    }
+    .text-logos ul a{
+        font-size: var(--sm);
     }
 }
