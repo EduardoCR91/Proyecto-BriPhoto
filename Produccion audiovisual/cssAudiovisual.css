@@ -111,7 +111,7 @@ body{
     width: 80%;
 } */
 .fondoComercial{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Proyecto-BriPhoto/Produccion audiovisual/img/fondo2.jpg");
     background-size: cover;
     width: 80%;
     padding-top: 70px;
@@ -120,7 +120,7 @@ body{
     width: 80%;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual//img/fondo3.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Proyecto-BriPhoto/Produccion audiovisual//img/fondo3.jpg");
     background-size: 100vmax;
     background-position: center;
 }
