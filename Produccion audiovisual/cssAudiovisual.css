@@ -114,7 +114,7 @@ body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo2.jpg");
     background-size: cover;
     width: 80%;
-    margin-top: 8%;
+    padding-top: 70px;
 }
 .FondoSocial{
     width: 80%;
