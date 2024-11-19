@@ -358,7 +358,7 @@ footer{
     .menu ul li a{
         text-decoration: none;
         color: var(--white);
-        font-size: var(--lg);
+        font-size: var(--md);
         font-weight: 200;
         font-family: var(--titulos);
         background-color: var(--dark-gray);
@@ -389,5 +389,20 @@ footer{
         padding: 5px;
         white-space: nowrap;
         width: 220px;
+    }
+    .portfolio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .portfolio-item{
+        width: 40%;
+        height: 200px;
+    }
+    .portfolio-item h3{
+        font-size: var(--md);
+        justify-content: center;
     }
 }
