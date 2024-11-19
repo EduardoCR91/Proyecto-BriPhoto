@@ -105,21 +105,22 @@ body{
 } */
 /* Cuerpo pagina*/
 
-.fantasma{
+/* .fantasma{
     display: block;
     height:88.6px;
     width: 80%;
-}
+} */
 .fondoComercial{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Proyecto-BriPhoto/Produccion audiovisual/img/fondo2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo2.jpg");
     background-size: cover;
     width: 80%;
+    margin-top: 8%;
 }
 .FondoSocial{
     width: 80%;
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Proyecto-BriPhoto/Produccion audiovisual//img/fondo3.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual//img/fondo3.jpg");
     background-size: 100vmax;
     background-position: center;
 }
@@ -174,10 +175,13 @@ right: 10px;
 }
 /*Empresarial 1*/
 .TituloComercial{
+    display: flex;
     width: 100%;
-    height: 50px;
+    height: 80px;
     padding-top: 40px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .TituloComercial h2{
     font-family: var(--titulos);
@@ -199,8 +203,7 @@ right: 10px;
     /*Para modificar el contenedor*/
     display: flex;
     width:40%;
-    height:50%;
-    min-width: 35%;
+    height:auto;
     border: solid 1px var(--white);
     border-radius: 10px;
     /*para el texto*/
@@ -208,8 +211,6 @@ right: 10px;
     justify-content: center;
 }
 .DescripcionEmpresarial p{
-    /*para el texto*/
-    display: inline-block;
     font-size: var(--lg);
     font-family: var(--textos);
     color: var(--white);
@@ -320,129 +321,184 @@ footer{
 /*Media Querys*/
 /*Menu*/
 @media (max-width: 800px){
-    .barra-nav{
-        display: flex;
-        grid-row: 1;
-        width: 80%;
-        height: 100%;
-        align-self: center;
-        justify-content: center;
-    }
-    
-    .menu img {
-        display: none;
-        width: 10%;
-        height: auto;
-    }
-    .menu{
-        width: 80%;
-        height: 12%;
-        display: flex;
-        position: fixed;
-        z-index: 2;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2px;
-    }
-    
-    .menu ul{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        list-style: none;
-        background-color: var(--dark-gray);
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 15px;
-        padding: 0;
-    }
-    
-    .menu ul li{
-        display: inline-block;
-        list-style: none;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-    
-    .menu ul li a{
-        text-decoration: none;
-        color: var(--white);
-        font-size: var(--lg);
-        font-weight: 200;
-        font-family: var(--titulos);
-        background-color: var(--dark-gray);
-        padding: 0;
-    }
-    
-    .menu ul li a:hover{
-        text-decoration: none;
-        color: var(--golden);
-    }
-    
-    .menu .submenu{
-        display: none;
-        
-        top: 100%;
-        list-style: none;
-        z-index: 10;
-    }
-    .menu ul li:hover .submenu {
-        display: block;
-        padding-left: 10%;
-        position: absolute;
-    }
-    .menu .submenu li a {
-        display: block;
-        text-decoration: none;
-        color: var(--white);
-        padding: 5px;
-        white-space: nowrap;
-        width: 220px;
-    }
+body{
+    height: auto;
+    display: block;
 }
-@media screen and (max-width:860px){
-    p{
-        font-size: var(--md);
-    }
-    .Empresarial_1{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10%;
-    }
-    .DescripcionEmpresarial{
-        margin-top: 20px;
-    }
-    /*empresarial2*/
-    .Empresarial_2 h2{
-        margin-top: 20px;
-    }
-    .ContenedorMarcas{
-        align-items: center;
-        justify-content: center;
-    }
-    .marcas{
-        width: 100px;
-        height: 140px;
-    }
-    .marcas img{
-        width: 100px;
-        height: 100px;
-    }
-    .Social_1{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        padding:auto;
-    }
-    #ContenedorCarrusel{
-        width:80%;
-    }
-    .DescripcionEmpresarial{
-        width: 80%;
-    }
-    .DescripcionSocial{
-        width: 80%;
-    }
+.barra-nav{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.menu img {
+    display: none;
+    width: 10%;
+    height: auto;
+}
+.menu{
+    width: 80%;
+    height: 12%;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.menu ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+    background-color: var(--dark-gray);
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    padding: 0;
+}
+
+.menu ul li{
+    display: inline-block;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--md);
+    font-weight: 200;
+    font-family: var(--titulos);
+    background-color: var(--dark-gray);
+    padding: 0;
+}
+
+.menu ul li a:hover{
+    text-decoration: none;
+    color: var(--golden);
+}
+
+.menu .submenu{
+    display: none;
+    
+    top: 100%;
+    list-style: none;
+    z-index: 10;
+}
+.menu ul li:hover .submenu {
+    display: block;
+    padding-left: 10%;
+    position: absolute;
+}
+.menu .submenu li a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px;
+    white-space: nowrap;
+    width: 220px;
+}
+.fondoComercial{
+    display: block;
+    margin-top: 12%;
+}
+.TituloComercial{
+    display: flex;
+    align-items: flex-end;
+}
+
+.TituloComercial h2{
+    font-size: var(--md);
+}
+.Empresarial_1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#ContenedorCarrusel{
+    width: 70%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+}
+.carruceles{
+    width: 70%;
+    overflow: hidden;
+    align-items: center;
+}
+.carruceles .Slider{
+    width: calc(100/2);
+    height: auto;
+    width: auto;
+}
+.Slider video{
+    width: 60%;
+    height: auto;
+}
+.boton_izq{
+    left: 20px;
+}
+.boton_der{
+    right: 20px;
+}
+.DescripcionEmpresarial{
+    width: 80%;
+    height: auto;
+}
+.DescripcionEmpresarial p{
+    font-size: var(--md);
+}
+.Empresarial_2{
+    height: auto;
+    padding: 2%;
+}
+.Empresarial_2 h2{
+    font-size: var(--md);
+}
+.marcas{
+    width: 30%;
+    height: 40%;
+    
+    justify-content: center;
+    align-items: center;
+}
+.marcas img{
+    width: 100%;
+    height: auto;
+}
+.marcas h4{
+    width: auto;
+}
+.FondoSocial{
+    display: flex;
+    flex-direction: column;
+}
+.TituloSocial h2{
+    font-size: var(--md);
+}
+.Social_1{
+    display: flex;
+    flex-direction: column;
+}
+.DescripcionSocial{
+    width: 90%;
+    height: 30%;
+}
+.DescripcionSocial p{
+    font-size: var(--md);
+}
+.footer p{
+    font-size: var(--md);
+}
 }
