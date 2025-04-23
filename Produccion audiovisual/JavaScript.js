@@ -10,7 +10,7 @@ btnRigt.addEventListener("click", e => moveToRight())
 //variables para simplificar operaciones
 let operacion = 0;
     counter = 0,
-    widthVid = 100/3;//slider.length//cuenta la cantidad de imagenes en carruceles
+    widthVid = 100/2;//slider.length//cuenta la cantidad de imagenes en carruceles
 function moveToRight() {
     if(counter >= 2-1){ //slider.length-1//me permite volver a la primera imagen al acabar el carrucel
         counter=0;
@@ -28,7 +28,7 @@ function moveToLeft(){
     counter--;//resetea el valor de counter
     if(counter < 0 ){
         counter = 2-1;//slider.length-1
-        operacion = widthVid*(3-1)//slider.length-1
+        operacion = widthVid*(2-1)//slider.length-1
         deslisador.style.transform = `translate(-${operacion}%)`
         deslisador.style.transition = "none"
     }else{
