@@ -13,9 +13,8 @@
 }
 
 body{
-    display: grid;
-    height: 1400px;
-    grid-template-rows:5% 35% 60%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     justify-items: center;
     align-items: center;
@@ -108,9 +107,7 @@ body{
 
 .first{
     display: flex;
-    grid-row: 2/3;
     width: 100%;
-    height: 80%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8 )),url("/Proyecto-BriPhoto/IMG principal/camera.webp");
     background-size: 100vmax;
     background-position: center;
@@ -143,11 +140,9 @@ body{
 /****************Segunda seccion de contacto***************/
 
 .middle{
-    grid-row: 3/4;
     background-color: var(--black);
     display: flex;
     width: 100%;
-    height: 100%;
     padding-bottom: 20px;
 }
 
@@ -339,10 +334,16 @@ footer{
 
 /******************Secciones de media querys/******************/
 @media (max-width: 800px){
+
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
     .barra-nav{
         display: flex;
-        grid-row: 1;
-        width: 80%;
+        width: 100%;
         height: 100%;
         align-self: center;
         justify-content: center;
@@ -354,14 +355,13 @@ footer{
         height: auto;
     }
     .menu{
-        width: 80%;
+        width: 100%;
         height: 12%;
         display: flex;
         position: fixed;
         z-index: 2;
         justify-content: center;
         align-items: center;
-        margin-top: 2px;
     }
     
     .menu ul{
@@ -421,9 +421,10 @@ footer{
     }
     .first{
         display: flex;
+        margin-top: 8em;
         flex-direction: column;
-        height: 100%;
-        width: 80%;
+        width: 100%;
+        height: 80%;
         padding: 0;
         margin: 0;
         background-size: 100vmax;
@@ -435,7 +436,6 @@ footer{
     .middle{
         display: flex;
         flex-direction: column;
-        height: 100%;
         padding: 0;
     }
     .form{

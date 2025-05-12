@@ -434,7 +434,7 @@ html, body {
     .menu ul li a{
         text-decoration: none;
         color: var(--white);
-        font-size: var(--lg);
+        font-size: var(--md);
         font-weight: 200;
         font-family: var(--titulos);
         background-color: var(--dark-gray);

@@ -14,9 +14,10 @@
 }
 
 body{
-    display: grid;
-    grid-template-rows: 4% 30% 30% 30%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    padding: 0;
     justify-items: center;
     align-items: center;
 }
@@ -25,9 +26,7 @@ body{
 
 .barra-nav{
     display: flex;
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
+    height: max-content;
     align-self: center;
     justify-content: center;
 }
@@ -103,13 +102,14 @@ body{
 
 /******************Segunda seccion-Presentacion, introduccion a la marca/******************/
 .photo-title{
-    display: grid;
-    grid-row: 2/3;
+    display: flex;
+    flex-direction: column-reverse;
     width: 100%;
     height: 100%;
     background-image: url("IMG principal/photography-camera-lens-close-up-f6fp1hpvcf5486o3.webp");
     background-size: 100vmax;
     background-position: 0%;
+    padding-top: 8em;
 }
 .title1{
     display: flex;
@@ -137,7 +137,7 @@ body{
 .logo{
     grid-row: 1;
     grid-column: 1/2;
-    width: 80%;
+    width: 40%;
     height: auto;
     margin: 0;
     align-items: center;
@@ -413,15 +413,18 @@ footer{
 
         body{
             height: auto;
-            display: block;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: auto;
         }
     .barra-nav{
         display: flex;
-        grid-row: 1;
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: max-content;
         align-self: center;
         justify-content: center;
+        position: fixed;
     }
     
     .menu img {
@@ -430,14 +433,12 @@ footer{
         height: auto;
     }
     .menu{
-        width: 80%;
-        height: 12%;
+        width: 100%;
         display: flex;
         position: fixed;
         z-index: 2;
         justify-content: center;
         align-items: center;
-        margin-top: 2px;
     }
     
     .menu ul{
@@ -497,7 +498,8 @@ footer{
     }
 
     .gallery-container{
-        height: 80%;
+        height: max-content;
+        width: 100%;
     }
 
     .gallery-1 h1{
@@ -516,10 +518,9 @@ footer{
    .photo-title{
     display: flex;
     flex-direction: column;
-    margin: 0;
-    margin-top: 20%;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 8em;
    } 
    .logo{
     display: flex;
@@ -532,10 +533,8 @@ footer{
    }
    .gallery-2 img{
     width: auto;
-    height: 70%;
+    height: 80%;
     border-radius: 15px;
-    margin-bottom: 20px;
-    max-width: 100%;
     flex-wrap: nowrap;
 }
 
