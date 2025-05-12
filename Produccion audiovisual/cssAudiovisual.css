@@ -3,6 +3,13 @@
     padding: 0px;
     box-sizing: border-box;
   }
+  /* Primero, establecer altura base en HTML y body */
+html, body {
+  height: 100%; /* Esto da una base para los cálculos porcentuales */
+  margin: 0;
+  padding: 0;
+}/*estos ajustes de arriba son para que barra nav, pueda tener una altura porcentual*/
+/*----------------------------------------------------------------------------------------------------*/
   :root{
     --white:#ffffff;
     --black: #000000;
@@ -19,20 +26,20 @@
     font-family: var(--textos);
     justify-items: center;
     align-items: center;
+    
   }
   /*Menu navegacion*/
   .barra-nav{
     display: flex;
-    grid-row: 1;
     width: 100%;
-    height: 100%;
+    height: 12%;
     align-self: center;
     justify-content: center;
 }
 
 .menu img {
     width: 10%;
-    height: auto;
+    height: 90%;
 }
 .menu{
     width: 100%;
@@ -42,6 +49,7 @@
     z-index: 2;
     justify-content: center;
     align-items: center;
+    top: 0;
     
 }
 
@@ -97,36 +105,73 @@
     padding: 5px;
     white-space: nowrap;
     width: 220px;
+}  
+/*ajustes que para que en moviles el sub menu de servicios funcione con onclic y no con hover*/
+@media (max-width: 600px){
+      /* Para mostrar el submenú con la clase .show-submenu que añadiremos con JS */
+      .menu ul li .show-submenu {
+        display: block;
+        padding-left: 10%;
+        position: absolute;
+    }
+    
+    /* Eliminar el comportamiento hover en móviles */
+    .menu ul li:hover .submenu {
+        display: none; /* Anulamos el hover en móviles */
+    }
+    
+    .menu ul li.active:hover .submenu {
+        display: block; /* Solo mostramos si está activo */
+    }
 }
-
-  
+/*----------------------------------------------------------------------------------------------------*/
   /* Cuerpo pagina*/
   /*Comercial*/
-  .fantasma{
-    display: block;
-    height:100%;
-    width: 100%;
-    margin-top: 100px;
-  }
   .fondoComercial{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo2.jpg");
     background-size: cover;
     width: 100%;
+    height: 100%;
   }
   .FondoSocial{
     width: 100%;
+    height: 80%;
     position: relative;
     overflow: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7 )),url("/Produccion audiovisual/img/fondo3.jpg");
     background-size: 100vmax;
     background-position: center;
   }
+  /*Empresarial 1--------------------------------------------------------------*/
+  .TituloComercial{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 2%;
+  }
+  .TituloComercial h2{
+    font-family: var(--titulos);
+    font-size: var(--lg);
+    color: var(--golden);
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+  }
+  .Empresarial_1{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   /*Carrusel*/
   #ContenedorCarrusel{
     position: relative;
-    height: 50%;
+    height: 90%;
     width: 40%;
     overflow: hidden;
+    z-index: 10;
   }
   .carruceles{
     width: 200%;
@@ -143,17 +188,19 @@
     object-fit: cover;
   }
   .boton_izq,.boton_der{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    background-color: transparent;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--golden);
-    transform: translate(0.-50%);
-    transition: .5 ease;
-    user-select: none;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejor visibilidad */
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--golden);
+  transform: translate(0, -50%);
+  transition: .5s ease;
+  user-select: none;
+  z-index: 20; /* Aumentar el z-index para estar por encima del iframe */
+  border-radius: 50%; /* Botones circulares */
   }
   .boton_izq{
   left: 10px;
@@ -161,34 +208,51 @@
   .boton_der{
   right: 10px;
   }
-  /*Empresarial 1*/
-  .TituloComercial{
+  /* 3. Crear una capa de protección sobre el iframe cuando se pasa el cursor cerca de los botones */
+  .Slider {
+    position: relative;
+    width: calc(100%/2);
+    height: 100%;
+  }
+  /* 4. Crear áreas "seguras" para los botones */
+  .boton-area {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    z-index: 15;
+    cursor: pointer;
+  }
+  .area-izq {
+    left: 0;
+  }
+
+  .area-der {
+    right: 0;
+  }
+  /* 5. Opción para deshabilitar temporalmente interacción con iframe */
+  .Slider iframe {
     width: 100%;
-    height: 50px;
-    padding-top: 20px;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Desactiva interacciones con el iframe cuando sea necesario */
   }
-  .TituloComercial h2{
-    font-family: var(--titulos);
-    font-size: var(--lg);
-    color: var(--golden);
-    border: 1px solid var(--white);
-    border-radius: 10px;
-    padding: 5px;
-    display: inline-block;
+  /* Restaurar interacción cuando el mouse está sobre el iframe (opcional) */
+  .Slider:hover iframe {
+    pointer-events: auto;
   }
-  .Empresarial_1{
-    /*width: 80%;*/
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    /*son configuraciones para quitar unos ajustes predefinidos del iframe de youtube*/
+    /* Eliminar configuraciones inconsistentes para iframe */
+  .ytp-title-link,
+  .html5-video-container,
+  .ytp-title-text {
+    display: none;
   }
   .DescripcionEmpresarial{
     /*Para modificar el contenedor*/
     display: flex;
     width:40%;
-    height:50%;
+    height:90%;
     min-width: 35%;
     border: solid 1px var(--white);
     border-radius: 10px;
@@ -208,7 +272,8 @@
   }
   /*Empresarial 2*/
   .Empresarial_2{
-    height: 400px;
+    width: 100%;
+    height: 45%;
     text-align: center;
   /*background-color:var(--black);*/
   }
@@ -219,7 +284,6 @@
   }
   .ContenedorMarcas{
   width: 100%;
-  height: inherit;
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
@@ -240,7 +304,7 @@
     width: 200px;
     color: var(--white);
   }
-  /*Social 1*/
+  /*Social 1------------------------------------------------------------*/
   .TituloSocial h2{
     font-family: var(--titulos);
     font-size: var(--lg);
@@ -252,7 +316,7 @@
   }
   .Social_1{
     width: 100%;
-    height: 540px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -260,14 +324,14 @@
   .TituloSocial{
     width: 100%;
     height: 50px;
-    padding-top: 10px;
+    padding-top: 2%;
     text-align: center;
     text-justify: auto;
   }
   .DescripcionSocial{
     display: flex;
     width:40%;
-    height:50%;
+    height:60%;
     border: solid 1px var(--white);
     border-radius: 10px;
     /*para el texto*/
@@ -281,19 +345,21 @@
   }
   
   .Video_social{
-    height: 50%;
+    height: 60%;
     width: 40%;
   }
-  .Video_social video{
+  .Video_social  video{
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
+
   /*Footer*/
   footer{
     display: flex;
     background-color: var(--dark-gray);
     width: 100%;
-    height: 100%;
+    height: 15%;
     align-items: center;
     justify-content: center;
     padding: 15px;
@@ -313,14 +379,20 @@
     font-size: var(--md);
     font-family: var(--textos);
   }
+/*cambios para iframe*/
+  .ytp-title-link,
+  .html5-video-container,
+  .ytp-title-text{
+    display: none;
+  }
+  /*-------------------------------------------------------------------------------*/
   /*Media Querys*/
   /*Menu*/
-  @media (max-width: 600px){
+  @media (max-width: 800px){
     .barra-nav{
         display: flex;
-        grid-row: 1;
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        height: 12%;
         align-self: center;
         justify-content: center;
     }
@@ -331,14 +403,13 @@
         height: auto;
     }
     .menu{
-        width: 80%;
+        width: 100%;
         height: 12%;
         display: flex;
         position: fixed;
-        z-index: 2;
+        z-index: 1000;
         justify-content: center;
         align-items: center;
-        margin-top: 2px;
     }
     
     .menu ul{
@@ -349,7 +420,6 @@
         background-color: var(--dark-gray);
         justify-content: space-evenly;
         align-items: center;
-        border-radius: 15px;
         padding: 0;
     }
     
@@ -396,22 +466,67 @@
         white-space: nowrap;
         width: 220px;
     }
-  }
-  /*Resto de la pagina, no lo separe*/
-  @media screen and (max-width:600px){
+    /*Resto de la pagina---------------------------------------------------------*/
     .TituloComercial{
-        padding-top: 10px;
+      height:5%;
+    }
+    .TituloComercial h2{
+    font-size: var(--md);
+    padding: 5px;
     }
     .Empresarial_1{
         display: block;
         justify-content: center;
         align-items: center;
+        height: 65%;
     }
+    /* CAMBIO: Ajustar tamaño del contenedor del carrusel para pantallas pequeñas */
+  #ContenedorCarrusel {
+    width: 90%;
+    height: 30vh; /* CAMBIO: Que se ajuste al contenido */
+    margin: 0 auto; /* CAMBIO: Centrado */
+  }
+    /* CAMBIO: Asegurar visibilidad del carrusel */
+  .Slider video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } 
+  .Slider iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: unset;
+    min-height: 100%
+  }
+  /* Eliminar configuraciones inconsistentes para iframe */
+  .ytp-title-link,
+  .html5-video-container,
+  .ytp-title-text,
+  .player-control-overlay,
+  .ytwPlayerTopControlsHost,
+  .ytp-chrome-top, .ytp-show-cards-title,
+  .ytmVideoInfoVideoDetailsContainer{
+    display: none;
+}
+  /* CAMBIO: Ocultar botones si se desea en móviles o hacerlos más pequeños */
+  .boton_izq, .boton_der {
+    font-size: 18px;
+    top: 45%;
+    padding: 2px 5px; /* CAMBIO: Más compactos */
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  
     .DescripcionEmpresarial{
-        margin-top: 20px;
-        padding-top: 20px;
+        width: 90%;
+        height: 50%;
+        margin: 0 auto;
     }
     /*empresarial2*/
+    .Empresarial_2{
+      height: 30%;
+    }
     .Empresarial_2 h2{
         margin-top: 20px;
     }
@@ -427,56 +542,32 @@
         width: 100px;
         height: 100px;
     }
+    /*Social---------------------------------*/
+    .TituloSocial{
+      height: 5%;
+    }
     .Social_1{
         display: block;
         justify-content:center;
         align-items: center;
     }
-    .Video_social{
-        width: 80%;
-    }
-    #ContenedorCarrusel{
-        width:80%;
-    }
-    .DescripcionEmpresarial{
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
     .DescripcionSocial{
         width: 80%;
+        height: 45%;
         margin: 0 auto;
     }
-  /* CAMBIO: Ajustar tamaño del contenedor del carrusel para pantallas pequeñas */
-  #ContenedorCarrusel {
-    width: 90%;
-    height: auto; /* CAMBIO: Que se ajuste al contenido */
-    margin: 0 auto; /* CAMBIO: Centrado */
-  }
-  
-  /* CAMBIO: Asegurar visibilidad del carrusel */
-  .Slider video {
-    height: auto;
-    max-height: 300px; /* CAMBIO: Limita altura para evitar desbordes */
-  }
-  
-  /* CAMBIO: Ocultar botones si se desea en móviles o hacerlos más pequeños */
-  .boton_izq, .boton_der {
-    font-size: 18px;
-    top: 45%;
-    padding: 2px 5px; /* CAMBIO: Más compactos */
-  }
   
   /* CAMBIO: Mejorar responsividad del video en sección social */
   .Video_social {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 30vh;
     padding: 10px 0;
+    margin: 0 auto; /* CAMBIO: Centrado */
   }
   
   .Video_social video {
     width: 100%;
-    height: auto;
+    height: 30vh;
     max-height: 300px; /* CAMBIO: Límite de altura */
   }
   
@@ -486,9 +577,9 @@
   }
   
   /* CAMBIO: Ajustes al título en pantallas pequeñas */
-  .TituloSocial h2, .TituloComercial h2 {
+  .TituloSocial h2{
     font-size: var(--md);
     padding: 5px;
   }
   }
-  
+

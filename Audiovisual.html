@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Produccion audiovisual/cssAudiovisual.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
     <script src="https://kit.fontawesome.com/7521f10d95.js" crossorigin="anonymous"></script>
+    <!--Este link de abajo es para conectar el script que permite que funcione el submenu desplegable en moviles-->
+    <script src="scripmenu.js"></script>
 </head>
 <body>
 <!-- menu navegacion-->
@@ -14,7 +16,7 @@
     <nav class="menu">
         <ul>
             <img src="IMG principal/LOGO_BLANCO_BRI.webp" alt="logo">
-            <li><a href="index.html" id="servicios">Servicios</a>
+            <li><a href="" id="servicios">Servicios</a>
                 <ul class="submenu">
                     <li><a href="Audiovisual.html">Produccion audiovisual</a></li>
                     <li><a href="Fotografia.html">Fotografia</a></li>
@@ -26,7 +28,6 @@
         </ul>
     </nav>
 </section>
-<div class="fantasma"></div>
     <!--Cuerpo pagina-->
     <!--Empresarial-->
     <div class="fondoComercial">
@@ -34,16 +35,25 @@
             <h2>Audiovisual Empresarial</h2>
         </div>
         <section class="Empresarial_1">
+            <!-- Iframe de YouTube con parámetros optimizados -->
             <div id="ContenedorCarrusel">
-                <!--Carrucel-->
                 <div class="carruceles" id="deslisador">
                     <section class="Slider">
                         <video src="Produccion audiovisual/vid/corporativa/LIBROALAIRE CHRIS CARPENTIER.webm" controls></video>
                     </section>
                     <section class="Slider">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/8qeDy4Lsu64?si=-qlQENUtiLwna1WQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <!-- Parámetros adicionales para controlar la interfaz de YouTube -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/8qeDy4Lsu64?si=-qlQENUtiLwna1WQ&controls=0&rel=0&showinfo=0&modestbranding=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
                     </section>
                 </div>
+                <!-- Áreas de protección para los botones -->
+                <div class="boton-area area-izq"></div>
+                <div class="boton-area area-der"></div>
+                <!-- Botones de navegación -->
                 <div class="boton_izq"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="boton_der"><i class="fa-solid fa-chevron-right"></i></div>
             </div>
@@ -80,9 +90,9 @@
             <p>Ya sea un anuncio que deslumbra, un cortometraje que emociona o un video corporativo que impacta, dejamos que nuestra pasión por el cine y nuestra experiencia hablen por ti. ¿Estás listo para hacer que tu mensaje brille?</p>
         </article>
         <!--video social-->
-                <section class="Video_social">
-                    <video src="Produccion audiovisual/vid/social/Reel Jennifer & Juan Pablo.webm" controls></video>
-                </section>
+        <section class="Video_social">
+            <video src="Produccion audiovisual/vid/social/Reel Jennifer & Juan Pablo.webm" controls></video>
+        </section>
     </section>
 </div>
     <footer>
@@ -94,7 +104,7 @@
         </section>
             <p>Universitaria Agustiniana</p>
             <p>Tecnologia en desarrollo de software</p>
-</div>              
+        </div>              
    </footer>
    <script src="Produccion audiovisual/JavaScript.js"></script>
 </body>
