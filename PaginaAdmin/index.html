@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Gestión</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <h2 class="logo">Brifotophilms</h2>
+      <h4>Admin-Panel</h4>
+      <nav>
+        <ul>
+          <li data-section="clientes">Clientes</li>
+          <li data-section="ventas">Ventas</li>
+          <li>Configuración</li>
+        </ul>
+        <div class="logout-section">
+            <button id="btnLogout">🔓 Cerrar sesión</button>
+        </div>
+      </nav>
+    </aside>
+
+    <div class="main-content">
+      <header class="navbar">
+        <div class="navbar-title" id="sectionTitle">Gestión de Clientes</div>
+        <div class="navbar-user">👤 Admin</div>
+      </header>
+
+      <!-- Sección Clientes-->
+      <section class="content" id="clientesSection">
+        <div class="controls">
+          <button id="btnCrearCliente">➕ Nuevo Cliente</button>
+          <input type="text" id="searchClienteInput" placeholder="Buscar cliente..." />
+          <button id="btnBuscarCliente">Buscar</button>
+        </div>
+
+        <div id="formClienteContainer" class="card hidden">
+          <h2>Crear / Editar Cliente</h2>
+          <form id="clientForm">
+            <input type="hidden" id="clientId" />
+            <label>Nombre:
+              <input type="text" id="nombre" required />
+            </label>
+            <label>Email:
+              <input type="email" id="email" required />
+            </label>
+            <label>Teléfono:
+              <input type="tel" id="telefono" />
+            </label>
+            <label>Asunto:
+                <input type="email" id="email" required />
+            </label>
+            <label>Fecha Ingreso:
+                <input type="email" id="email" required />
+            </label>
+            <div class="form-buttons">
+              <button type="button" id="btnGuardarCliente">💾 Guardar</button>
+              <button type="button" id="btnCancelarCliente">❌ Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Asunto</th>
+                <th>Fecha Ingreso</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="clientTableBody">
+              <!-- Clientes se cargarán aquí -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección Ventas  -->
+      <section class="content hidden" id="ventasSection">
+        <div class="controls">
+          <button id="btnCrearVenta">➕ Nueva Venta</button>
+          <input type="text" id="searchVentaInput" placeholder="Buscar venta..." />
+          <button id="btnBuscarVenta">Buscar</button>
+        </div>
+
+        <div id="formVentaContainer" class="card hidden">
+          <h2>Registrar Venta</h2>
+          <form id="ventaForm">
+            <input type="hidden" id="ventaId" />
+            <label>Cliente:
+              <input type="text" id="ventaCliente" required />
+            </label>
+            <label>Cédula:
+              <input type="text" id="ventaCedula" required />
+            </label>
+            <label>Dirección:
+              <input type="text" id="ventaDireccion" required />
+            </label>
+            <label>Fecha:
+              <input type="date" id="ventaFecha" required />
+            </label>
+            <label>Método de Pago:
+              <select id="ventaMetodoPago" required>
+                <option value="">Seleccione...</option>
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta</option>
+                <option value="Transferencia">Transferencia</option>
+              </select>
+            </label>
+            <label>Observaciones:
+              <textarea id="ventaObservaciones" rows="3"></textarea>
+            </label>
+            <div class="form-buttons">
+              <button type="button" id="btnGuardarVenta">💾 Guardar</button>
+              <button type="button" id="btnCancelarVenta">❌ Cancelar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>ID Interno</th>
+                <th>Cliente</th>
+                <th>Cédula</th>
+                <th>Fecha</th>
+                <th>Método Pago</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <!-- Pendiente desarrollo para que Ventas se carguen aquí -->
+            <tbody id="ventaTableBody">
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #bfc2cf;
+    color: #333;
+  }
+  
+  .admin-layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 100%;
+    background-color: #07090e;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .sidebar li {
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+  }
+  
+  .sidebar li:hover,
+  .sidebar .active {
+    background-color: #1f2937;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #ffffff;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .navbar-title {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+  }
+  
+  .navbar-user {
+    color: #000000;
+    font-size: 14px;
+  }
+  
+  /* Content area */
+  .content {
+    padding: 15px;
+    overflow-x: auto;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .controls input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #194a9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 15px;
+    overflow-x: auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    min-width: 600px; /* Forzar scroll en móviles */
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  
+  td button {
+    background-color: #1089b9;
+    padding: 6px 8px;
+    font-size: 13px;
+    margin-right: 5px;
+    min-width: 70px;
+  }
+  
+  td button:last-child {
+    background-color: #b36b6b;
+  }
+  
+  /* Formulario */
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  form input,form select,form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .form-buttons button {
+    width: auto;
+    min-width: 100px;
+  }
+  
+  .logout-section {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .logout-section button {
+    background-color: #959292;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s;
+  }
+  
+  .logout-section button:hover {
+    background-color: #dc4949c5;
+  }
+  
+  /* Estilos para pantallas medianas (tablets) */
+  @media (min-width: 600px) {
+    .admin-layout {
+      flex-direction: row;
+    }
+    
+    .sidebar {
+      width: 220px;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    
+    .sidebar ul {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+    
+    .controls {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .controls input[type="text"] {
+      width: auto;
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    button {
+      width: auto;
+      padding: 10px 14px;
+    }
+    
+    .navbar {
+      padding: 16px 20px;
+    }
+    
+    .navbar-title {
+      font-size: 20px;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    th, td {
+      padding: 12px 10px;
+      font-size: 15px;
+    }
+  }
+  
+  /* Estilos para pantallas grandes (desktop) */
+  @media (min-width: 1024px) {
+    .sidebar {
+      padding: 20px;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .card {
+      padding: 20px;
+    }
+    
+    table {
+      min-width: auto;
+    }
+  }
+  
+  /* Estilos específicos para formularios en móvil */
+  @media (max-width: 599px) {
+    #formClienteContainer, 
+    #formVentaContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      overflow-y: auto;
+      margin: 0;
+      border-radius: 0;
+      padding: 20px 15px;
+    }
+    
+    .form-buttons {
+      position: sticky;
+      bottom: 0;
+      background: white;
+      padding: 15px 0;
+      border-top: 1px solid #eee;
+      margin-bottom: -15px;
+    }
+  }

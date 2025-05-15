@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Contenedor principal */
+  .login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tarjeta de login */
+  .login-card {
+    width: 90%;
+    max-width: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Logo */
+  .logo {
+    color: #07090e;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Campos de entrada */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Botón */
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #194a9a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-login:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 20px;
+      width: 85%;
+    }
+  }
