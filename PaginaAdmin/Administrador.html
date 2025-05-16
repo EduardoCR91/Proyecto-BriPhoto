@@ -93,19 +93,19 @@
 
         <div id="formVentaContainer" class="card hidden">
           <h2>Registrar Venta</h2>
-          <form id="ventaForm">
+          <form id="ventaForm" method="post" action="registrar_venta.php">
             <input type="hidden" id="ventaId" />
             <label>Cliente:
-              <input type="text" id="ventaCliente" required />
+              <input type="text" id="ventaCliente" name="nombre" required />
             </label>
             <label>Cédula:
-              <input type="text" id="ventaCedula" required />
+              <input type="text" id="ventaCedula" name="id_cliente" required />
             </label>
             <label>Dirección:
-              <input type="text" id="ventaDireccion" required />
+              <input type="text" id="ventaDireccion" name="direccion" required />
             </label>
             <label>Fecha:
-              <input type="date" id="ventaFecha" required />
+              <input type="date" id="ventaFecha" name="fecha_venta" required />
             </label>
             <label>Método de Pago:
               <select id="ventaMetodoPago" required>
@@ -116,7 +116,7 @@
               </select>
             </label>
             <label>Observaciones:
-              <textarea id="ventaObservaciones" rows="3"></textarea>
+              <textarea id="ventaObservaciones" name="observaciones"  rows="3"></textarea>
             </label>
             <div class="form-buttons">
               <button type="button" id="btnGuardarVenta">💾 Guardar</button>
