@@ -39,7 +39,7 @@
         <div class="form">
             
             <h1>Ponte en contacto</h1>
-            <form action="submit" id="contactForm">
+            <form action="procesar_formulario.php" method="POST" id="contactForm">
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required>
                 <label for="email">Email</label>
@@ -48,7 +48,7 @@
                 <input type="text" id="subject" name="asunto" placeholder="Asunto del mensaje" required>
                 <label for="message">Mensaje</label>
                 <textarea id="message" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-                <button type="button" id="btn-message" >Enviar ahora</button>
+                <button type="submit" id="btn-message" >Enviar ahora</button>
             </form>
             <p id="feedback">¡Tu mensaje ha sido enviado correctamente!</p>
         </div>

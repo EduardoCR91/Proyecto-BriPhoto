@@ -6,12 +6,19 @@ $contrasena = "";  // cambia si tienes clave
 $basedatos = "tu_basedatos"; // cambia por el nombre real
 
 // Crear conexión
-$conn = new mysqli($host, $usuario, $contrasena, $basedatos);
+$conn = new mysqli("localhost", "root", "root", "bri_contacto", 8889);
 
 // Verificar conexión
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    // Respondemos con JSON si hay error
+    header('Content-Type: application/json');
+    echo json_encode([
+        'success' => false,
+        'message' => '❌ Conexión fallida: ' . $conn->connect_error
+    ]);
+    exit;
 }
+
 
 // Recoger datos del formulario
 $id_cliente = $_POST['id_cliente'];
@@ -37,12 +44,18 @@ if ($stmt === false) {
 $stmt->bind_param("ssssss", $id_cliente, $nombre, $direccion, $fecha_venta, $metodo_pago, $observaciones);
 
 // Ejecutar y verificar
+header('Content-Type: application/json');
+
 if ($stmt->execute()) {
-    echo "✅ Venta registrada exitosamente.";
-    // Aquí puedes redirigir si lo deseas:
-    // header("Location: tu_pagina_principal.php");
+    echo json_encode([
+        'success' => true,
+        'message' => '✅ Venta registrada exitosamente.'
+    ]);
 } else {
-    echo "❌ Error al registrar la venta: " . $stmt->error;
+    echo json_encode([
+        'success' => false,
+        'message' => '❌ Error al registrar la venta: ' . $stmt->error
+    ]);
 }
 
 // Cerrar conexiones

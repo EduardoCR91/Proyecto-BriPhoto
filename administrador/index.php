@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Verificar si el usuario ha iniciado sesión como administrador
+if (!isset($_SESSION['admin'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,10 +25,11 @@
         <ul>
           <li data-section="clientes">Clientes</li>
           <li data-section="ventas">Ventas</li>
-          <li>Configuración</li>
+          <!--<li>Configuración</li>-->
         </ul>
         <div class="logout-section">
-            <button id="btnLogout">🔓 Cerrar sesión</button>
+            <button id="btnLogout" type="button">🔓 Cerrar sesión</button>
+            <!--<a href="logout.php" id="btnLogout">Cerrar sesión 🔒</a>-->
         </div>
       </nav>
     </aside>
@@ -32,35 +43,9 @@
       <!-- Sección Clientes-->
       <section class="content" id="clientesSection">
         <div class="controls">
-          <button id="btnCrearCliente">➕ Nuevo Cliente</button>
+          <!--<button id="btnCrearCliente">➕ Nuevo Cliente</button>-->
           <input type="text" id="searchClienteInput" placeholder="Buscar cliente..." />
           <button id="btnBuscarCliente">Buscar</button>
-        </div>
-
-        <div id="formClienteContainer" class="card hidden">
-          <h2>Crear / Editar Cliente</h2>
-          <form id="clientForm">
-            <input type="hidden" id="clientId" />
-            <label>Nombre:
-              <input type="text" id="nombre" required />
-            </label>
-            <label>Email:
-              <input type="email" id="email" required />
-            </label>
-            <label>Teléfono:
-              <input type="tel" id="telefono" />
-            </label>
-            <label>Asunto:
-                <input type="email" id="email" required />
-            </label>
-            <label>Fecha Ingreso:
-                <input type="email" id="email" required />
-            </label>
-            <div class="form-buttons">
-              <button type="button" id="btnGuardarCliente">💾 Guardar</button>
-              <button type="button" id="btnCancelarCliente">❌ Cancelar</button>
-            </div>
-          </form>
         </div>
 
         <div class="card">
@@ -69,9 +54,9 @@
               <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Email</th>
-                <th>Teléfono</th>
+                <th>Correo</th>
                 <th>Asunto</th>
+                <th>Mensaje</th>
                 <th>Fecha Ingreso</th>
                 <th>Acciones</th>
               </tr>
@@ -86,29 +71,29 @@
       <!-- Sección Ventas  -->
       <section class="content hidden" id="ventasSection">
         <div class="controls">
-          <button id="btnCrearVenta">➕ Nueva Venta</button>
+          <button id="btnNuevaVenta">➕ Nueva Venta</button>
           <input type="text" id="searchVentaInput" placeholder="Buscar venta..." />
           <button id="btnBuscarVenta">Buscar</button>
         </div>
 
         <div id="formVentaContainer" class="card hidden">
           <h2>Registrar Venta</h2>
-          <form id="ventaForm" method="post" action="registrar_venta.php">
+          <form id="ventaForm" method="POST" action="registrar_venta.php">
             <input type="hidden" id="ventaId" />
             <label>Cliente:
-              <input type="text" id="ventaCliente" name="nombre" required />
+              <input type="text" id="nombre" name="nombre" required />
             </label>
             <label>Cédula:
-              <input type="text" id="ventaCedula" name="id_cliente" required />
+              <input type="text" id="id_cliente" name="id_cliente" required />
             </label>
             <label>Dirección:
-              <input type="text" id="ventaDireccion" name="direccion" required />
+              <input type="text" id="direccion" name="direccion" required />
             </label>
             <label>Fecha:
-              <input type="date" id="ventaFecha" name="fecha_venta" required />
+              <input type="date" id="fecha_venta" name="fecha_venta" required />
             </label>
             <label>Método de Pago:
-              <select id="ventaMetodoPago" required>
+              <select id="metodo_pago" name="metodo_pago" required>
                 <option value="">Seleccione...</option>
                 <option value="Efectivo">Efectivo</option>
                 <option value="Tarjeta">Tarjeta</option>
@@ -119,7 +104,7 @@
               <textarea id="ventaObservaciones" name="observaciones"  rows="3"></textarea>
             </label>
             <div class="form-buttons">
-              <button type="button" id="btnGuardarVenta">💾 Guardar</button>
+              <button type="submit" id="btnGuardarVenta">💾 Guardar</button>
               <button type="button" id="btnCancelarVenta">❌ Cancelar</button>
             </div>
           </form>
@@ -147,5 +132,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="logueo.js"></script>
 </body>
 </html>
