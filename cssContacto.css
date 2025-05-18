@@ -108,7 +108,7 @@ body{
 .first{
     display: flex;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8 )),url("/Proyecto-BriPhoto/IMG principal/camera.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8 )),url("/Proyecto-BriPhoto/IMG_principal/camera.webp");
     background-size: 100vmax;
     background-position: center;
     flex-direction: column;
