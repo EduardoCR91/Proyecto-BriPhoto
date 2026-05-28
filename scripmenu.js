@@ -50,4 +50,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     reveals.forEach((item) => observer.observe(item));
   }
+
+  const modal = document.getElementById('video-modal') || document.getElementById('media-modal');
+  const modalBody = document.getElementById('video-modal-body');
+  const videoTriggers = document.querySelectorAll('.video-trigger, .photo-trigger');
+
+  if (modal && modalBody && videoTriggers.length) {
+    const closeModal = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      modalBody.innerHTML = '';
+      document.body.style.overflow = '';
+    };
+
+    videoTriggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const type = trigger.dataset.type || 'image';
+        const src = trigger.dataset.src;
+        const alt = trigger.dataset.alt || 'Vista ampliada';
+        if (!src) return;
+
+        if (type === 'youtube') {
+          modalBody.innerHTML = `<iframe src="${src}" title="Video de muestra" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else if (type === 'local') {
+          modalBody.innerHTML = `<video controls autoplay><source src="${src}" type="video/webm">Tu navegador no soporta video.</video>`;
+        } else {
+          modalBody.innerHTML = `<img src="${src}" alt="${alt}">`;
+        }
+
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    modal.addEventListener('click', (event) => {
+      if (event.target.closest('[data-close-modal="true"]')) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
 });

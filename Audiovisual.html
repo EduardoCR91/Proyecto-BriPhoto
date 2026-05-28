@@ -44,21 +44,35 @@
 
     <section class="portfolio reveal">
       <div class="section-title dark"><p>Showreel</p><h2>Empresarial y social</h2></div>
-      <div class="mosaic">
-        <video controls preload="metadata" style="width:100%;border-radius:14px;grid-column:span 6;min-height:280px;object-fit:cover;"><source src="Produccion_audiovisual/vid/corporativa/LIBROALAIRE CHRIS CARPENTIER.webm" type="video/webm"></video>
-        <iframe loading="lazy" style="width:100%;border-radius:14px;grid-column:span 6;min-height:280px;border:0;" src="https://www.youtube.com/embed/8qeDy4Lsu64?controls=0&rel=0&modestbranding=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video audiovisual"></iframe>
+      <div class="mosaic audiovisual-mosaic">
+        <button class="video-trigger" type="button" data-type="local" data-src="Produccion_audiovisual/vid/corporativa/LIBROALAIRE CHRIS CARPENTIER.webm">
+          <img src="Produccion_audiovisual/img/fondo1.jpg" alt="Vista previa video empresarial" loading="lazy" decoding="async">
+          <span>Ver video empresarial</span>
+        </button>
+        <button class="video-trigger" type="button" data-type="youtube" data-src="https://www.youtube.com/embed/8qeDy4Lsu64?autoplay=1&rel=0&modestbranding=1">
+          <img src="Produccion_audiovisual/img/fondo2.jpg" alt="Vista previa video social" loading="lazy" decoding="async">
+          <span>Ver video social</span>
+        </button>
       </div>
     </section>
 
     <section class="services reveal">
       <div class="section-title"><p>Clientes</p><h2>Clientes y aliados que respaldan nuestro trabajo</h2></div>
-      <div class="service-grid">
-        <article class="service-card"><img src="Produccion_audiovisual/img/Assa Abloy.jpeg" alt="Assa Abloy" loading="lazy" decoding="async"><h3>Assa Abloy</h3></article>
-        <article class="service-card"><img src="Produccion_audiovisual/img/logos-diversion-salitre-magico.jpg" alt="Salitre Magico" loading="lazy" decoding="async"><h3>Salitre Magico</h3></article>
-        <article class="service-card"><img src="Produccion_audiovisual/img/Libro al aire.jpg" alt="Libro al Aire" loading="lazy" decoding="async"><h3>Libro Al Aire</h3></article>
+      <div class="service-grid ally-grid">
+        <article class="service-card ally-card"><div class="ally-media"><img src="Produccion_audiovisual/img/Assa Abloy.jpeg" alt="Assa Abloy" loading="lazy" decoding="async"></div><h3>Assa Abloy</h3></article>
+        <article class="service-card ally-card"><div class="ally-media"><img src="Produccion_audiovisual/img/logos-diversion-salitre-magico.jpg" alt="Salitre Magico" loading="lazy" decoding="async"></div><h3>Salitre Magico</h3></article>
+        <article class="service-card ally-card"><div class="ally-media"><img src="Produccion_audiovisual/img/Libro al aire.jpg" alt="Libro al Aire" loading="lazy" decoding="async"></div><h3>Libro Al Aire</h3></article>
       </div>
     </section>
   </main>
+
+  <section class="video-modal" id="video-modal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-close-modal="true"></div>
+    <div class="video-modal-content" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+      <button class="video-modal-close" type="button" data-close-modal="true" aria-label="Cerrar">×</button>
+      <div class="video-modal-body" id="video-modal-body"></div>
+    </div>
+  </section>
 
   <footer class="footer">
     <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>

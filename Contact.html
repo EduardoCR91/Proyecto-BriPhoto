@@ -25,24 +25,24 @@
   <main>
     <section class="services reveal">
       <div class="section-title"><p>Contacto</p><h1>Cuentanos tu proyecto y construimos una propuesta a medida</h1></div>
-      <div class="service-grid">
-        <article class="service-card" style="grid-column:span 2;">
+      <div class="service-grid contact-grid">
+        <article class="service-card contact-form-card">
           <h3>Ponte en contacto</h3>
-          <form action="procesar_formulario.php" method="POST" id="contactForm" style="display:grid;gap:.65rem;">
+          <form action="procesar_formulario.php" method="POST" id="contactForm" class="contact-form">
             <label for="name">Nombre</label><input type="text" id="name" name="nombre" required>
             <label for="email">Email</label><input type="email" id="email" name="correo" required>
             <label for="subject">Asunto</label><input type="text" id="subject" name="asunto" required>
             <label for="message">Mensaje</label><textarea id="message" name="mensaje" rows="5" required></textarea>
-            <button type="submit" id="btn-message" class="btn btn-primary" style="border:0;cursor:pointer;">Enviar ahora</button>
+            <button type="submit" id="btn-message" class="btn btn-primary contact-submit">Enviar ahora</button>
           </form>
-          <p id="feedback" style="display:none;color:#2d7e31;font-weight:700;">Tu mensaje ha sido enviado correctamente.</p>
+          <p id="feedback" class="feedback-message">Tu mensaje ha sido enviado correctamente.</p>
         </article>
-        <article class="service-card">
+        <article class="service-card direct-channels-card">
           <h3>Canales directos</h3>
-          <p><a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank" rel="noopener noreferrer">Instagram</a></p>
-          <p><a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-          <p><a href="https://wa.me/+573503742323" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-          <p><a href="mailto:briPhothofilms@outlook.com">briPhothofilms@outlook.com</a></p>
+          <a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://wa.me/+573503742323" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="mailto:briPhothofilms@outlook.com">briPhothofilms@outlook.com</a>
         </article>
       </div>
     </section>

@@ -34,15 +34,23 @@
 
     <section class="portfolio reveal">
       <div class="section-title dark"><p>Galeria</p><h2>Selecciones por categoria</h2></div>
-      <div class="mosaic">
-        <img src="Fotografia/Imagenes Pets/DSC07263_rtk.webp" alt="Pets" loading="lazy" decoding="async">
-        <img src="Fotografia/Imagenes Arquitectonicas/DSC09819_rtk.webp" alt="Arquitectonica" loading="lazy" decoding="async">
-        <img src="Fotografia/Imagenes Productos/DSC04943_RTK.webp" alt="Producto" loading="lazy" decoding="async">
-        <img src="Fotografia/Imagenes Social/BODA ALEJANDRA & CAMILO-309.webp" alt="Social" loading="lazy" decoding="async">
-        <img src="Fotografia/Imagenes Productos/DSC04950_RTK.webp" alt="Producto spa" loading="lazy" decoding="async">
+      <div class="mosaic photo-mosaic">
+        <button class="photo-trigger" type="button" data-src="Fotografia/Imagenes Pets/DSC07263_rtk.webp" data-alt="Pets"><img src="Fotografia/Imagenes Pets/DSC07263_rtk.webp" alt="Pets" loading="lazy" decoding="async"></button>
+        <button class="photo-trigger" type="button" data-src="Fotografia/Imagenes Arquitectonicas/DSC09819_rtk.webp" data-alt="Arquitectonica"><img src="Fotografia/Imagenes Arquitectonicas/DSC09819_rtk.webp" alt="Arquitectonica" loading="lazy" decoding="async"></button>
+        <button class="photo-trigger" type="button" data-src="Fotografia/Imagenes Productos/DSC04943_RTK.webp" data-alt="Producto"><img src="Fotografia/Imagenes Productos/DSC04943_RTK.webp" alt="Producto" loading="lazy" decoding="async"></button>
+        <button class="photo-trigger" type="button" data-src="Fotografia/Imagenes Social/BODA ALEJANDRA & CAMILO-309.webp" data-alt="Social"><img src="Fotografia/Imagenes Social/BODA ALEJANDRA & CAMILO-309.webp" alt="Social" loading="lazy" decoding="async"></button>
+        <button class="photo-trigger" type="button" data-src="Fotografia/Imagenes Productos/DSC04950_RTK.webp" data-alt="Producto spa"><img src="Fotografia/Imagenes Productos/DSC04950_RTK.webp" alt="Producto spa" loading="lazy" decoding="async"></button>
       </div>
     </section>
   </main>
+
+  <section class="video-modal" id="media-modal" aria-hidden="true">
+    <div class="video-modal-backdrop" data-close-modal="true"></div>
+    <div class="video-modal-content" role="dialog" aria-modal="true" aria-label="Vista ampliada de fotografia">
+      <button class="video-modal-close" type="button" data-close-modal="true" aria-label="Cerrar">×</button>
+      <div class="video-modal-body" id="video-modal-body"></div>
+    </div>
+  </section>
 
   <footer class="footer">
     <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
