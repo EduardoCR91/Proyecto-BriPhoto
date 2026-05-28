@@ -15,8 +15,16 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    // Tu script adaptado
-    document.getElementById('btn-message').addEventListener('click', async function () {
+    const form = document.getElementById('contactForm');
+    const submitButton = document.getElementById('btn-message');
+
+    if (!form || !submitButton) {
+      throw new Error('No se encontro el formulario de contacto.');
+    }
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const subject = document.getElementById('subject').value.trim();
@@ -28,6 +36,9 @@
       }
 
       try {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
         // Guardar en Firebase Firestore
         await addDoc(collection(db, "mensajes"), {
           nombre: name,
@@ -50,5 +61,8 @@
         }, 5000);
       } catch (error) {
         alert('❌ Ocurrió un error al enviar el mensaje: ' + error.message);
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar ahora';
       }
     });
