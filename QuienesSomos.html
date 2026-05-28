@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quienes Somos | BriPhotoFilms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssHome.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="Logo BriPhotoFilms">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-submenu">
+          <button class="submenu-toggle" aria-expanded="false">Servicios</button>
+          <ul class="submenu">
+            <li><a href="Audiovisual.html">Produccion audiovisual</a></li>
+            <li><a href="Fotografia.html">Fotografia</a></li>
+            <li><a href="Locucion.html">Locucion comercial</a></li>
+          </ul>
+        </li>
+        <li><a href="QuienesSomos.html">Quienes somos</a></li>
+        <li><a href="Contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services reveal">
+      <div class="section-title">
+        <p>Nuestro equipo</p>
+        <h1>Historias visuales con direccion creativa y precision tecnica</h1>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>CEO y productor</h3>
+          <p>Brian Rojas Rios</p>
+        </article>
+        <article class="service-card">
+          <h3>Creativos y diseno</h3>
+          <p>Duvan Quiroga, Zarica Calderon y David Penuela.</p>
+        </article>
+        <article class="service-card">
+          <h3>Fotografia</h3>
+          <p>Diego Zambrano y Ronny Avila.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-preview reveal">
+      <div>
+        <p class="eyebrow">Manifiesto</p>
+        <h2>No solo capturamos imagenes, construimos posicionamiento visual</h2>
+        <p>Trabajamos cada proyecto desde la estrategia, la direccion y la ejecucion para lograr piezas que emocionan y, al mismo tiempo, cumplen objetivos de marca y negocio.</p>
+        <a class="btn btn-primary" href="Contact.html">Hablemos de tu proyecto</a>
+      </div>
+      <img src="IMG_principal/office.webp" alt="Equipo creativo trabajando" loading="lazy" decoding="async">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
+    <p>Universitaria Agustiniana | Tecnologia en desarrollo de software</p>
+  </footer>
+
+  <script src="scripmenu.js"></script>
+</body>
+</html>

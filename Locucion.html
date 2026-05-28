@@ -1,126 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locución Profesional</title>
-<link rel="stylesheet" href="Locucion_Comercial/cssLocucion.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locucion Comercial | BriPhotoFilms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssHome.css">
 </head>
 <body>
-    <section class="barra-nav">
-        <nav class="menu">
-            <ul>
-                <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="">
-                <li><a href="index.html" id="servicios">Servicios</a>
-                    <ul class="submenu">
-                        <li><a href="Audiovisual.html">Producción audiovisual</a></li>
-                        <li><a href="Fotografia.html">Fotografia</a></li>
-                        <li><a href="Locucion.html">Locucion Comercial</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html">Quiénes somos</a></li>
-                <li><a href="Contact.html">Contactenos</a></li>
-            </ul>
-        </nav>
-    </section>
-    <div class="todo">
-    <!-- Home -->
-    <section id="home">
-        <h1>Bienvenido a Mi Sitio de Locución</h1>
-        <br>
-        <p>Locución Comercial que Conecta
-            La voz es el hilo invisible que une a las historias con su audiencia. En Briphotofilms, 
-            contamos con un elenco de locutores profesionales que aportan autenticidad y energía a cada proyecto.
-             Ya sea una voz en off que seduce en un video promocional, un anuncio radial que capta la atención o una presentación
-              que deja huella, adaptamos estilos y tonos para que tu mensaje resuene. Déjanos ponerle voz a tu visión y llevar tu contenido
-               a nuevas alturas.
-            </p>
-            <br>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Ir al inicio"><img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="Logo BriPhotoFilms"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-submenu"><button class="submenu-toggle" aria-expanded="false">Servicios</button><ul class="submenu"><li><a href="Audiovisual.html">Produccion audiovisual</a></li><li><a href="Fotografia.html">Fotografia</a></li><li><a href="Locucion.html">Locucion comercial</a></li></ul></li>
+        <li><a href="QuienesSomos.html">Quienes somos</a></li>
+        <li><a href="Contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="services reveal">
+      <div class="section-title"><p>Locucion</p><h1>Locucion profesional para mensajes claros y memorables</h1></div>
+      <div class="service-grid">
+        <article class="service-card"><h3>Tono emotivo</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/SURA 1 TONO EMOTIVO.mp3" type="audio/mpeg"></audio></article>
+        <article class="service-card"><h3>Tono energetico</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/SURA 2 TONO ENERGICO.mp3" type="audio/mpeg"></audio></article>
+        <article class="service-card"><h3>Tono natural</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/SURA 3 TONO NATURAL.mp3" type="audio/mpeg"></audio></article>
+      </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio">
-        <br>
-        <h2>Mis Audios</h2>
-        <br>
-        
-
-        <div class="audio-container">
-            <div class="audio-item">
-                <p>Sura 1 tono emotivo</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 2.webp" alt="Sura 1 tono emotivo">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/SURA 1 TONO EMOTIVO.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Sura 2 tono energico</p>    
-                <img src="Locucion_Comercial/Fotos locion/Foto 3.webp" alt="Sura 2 tono energico">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/SURA 2 TONO ENERGICO.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Sura 3 tono natural</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 2.webp" alt="Sura 3 tono natural">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/SURA 3 TONO NATURAL.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Audio clientes salitre magico</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 3.webp" alt="Audio clientes salitre magico">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/2.Audio Cliente Salitre Magico.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Clientes Sura voz off</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 2.webp" alt="Clientes Sura voz off ">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/2.Cliente SURA voz off para pagina Web.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Clientes Saludcoop voice over</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 3.webp" alt="Clientes Saludcoop voice over ">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/4.Cliente Saludcoop voice over videos corporativos.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Voice over video motivacional</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 2.webp" alt="Voice over video motivacional">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/Muestra Voice over Video Motivacional1.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-            
-            <div class="audio-item">
-                <p>Presentacion locucion Briphotofilms</p>
-                <img src="Locucion_Comercial/Fotos locion/Foto 3.webp" alt="Presentacion locucion Briphotofilms">
-                <audio controls>
-                    <source src="Locucion_Comercial/Audios/Presentación Locución Briphotofilms1.mp3" type="audio/mpeg">
-                </audio>
-            </div>
-        </div>
+    <section class="portfolio reveal">
+      <div class="section-title dark"><p>Muestras</p><h2>Trabajos comerciales destacados</h2></div>
+      <div class="service-grid" style="max-width:1160px;padding:0 1rem;">
+        <article class="service-card"><h3>Cliente Salitre Magico</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/2.Audio Cliente Salitre Magico.mp3" type="audio/mpeg"></audio></article>
+        <article class="service-card"><h3>Cliente Sura voz off</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/2.Cliente SURA voz off para pagina Web.mp3" type="audio/mpeg"></audio></article>
+        <article class="service-card"><h3>Voice over motivacional</h3><audio controls preload="none" style="width:100%"><source src="Locucion_Comercial/Audios/Muestra Voice over Video Motivacional1.mp3" type="audio/mpeg"></audio></article>
+      </div>
     </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
+    <p>Universitaria Agustiniana | Tecnologia en desarrollo de software</p>
+  </footer>
+
+  <script src="scripmenu.js"></script>
 </body>
-<footer >
-    <div class="footer">
-        <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban León - Wilson Andres Carmona</p>
-    <section id="Contacto">
-            <p>carlos.cruzr@uniagustiniana.edu.co</p>
-    </section>
-        <p>Universitaria Agustiniana</p>
-        <p>Tecnologia en desarrollo de software</p>
-</footer> 
-
 </html>

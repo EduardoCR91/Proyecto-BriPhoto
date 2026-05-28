@@ -1,143 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link rel="stylesheet" href="cssHome.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BriPhotoFilms | Fotografia y Produccion Audiovisual</title>
+  <meta name="description" content="Fotografia profesional, produccion audiovisual y locucion comercial para marcas y personas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssHome.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Ir al inicio">
+        <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="Logo BriPhotoFilms">
+      </a>
 
-    <!--Barra de navegacion general para todas las paginas-->
-    <section class="barra-nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
 
-        
-        <nav class="menu">
-            <ul>
-                <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="logo">
-                <li><a href="index.html" id="servicios">Servicios</a>
-                    <ul class="submenu">
-                        <li><a href="Audiovisual.html">Producción audiovisual</a></li>
-                        <li><a href="Fotografia.html">Fotografia</a></li>
-                        <li><a href="Locucion.html">Locucion comercial</a></li>
-                    </ul>
-                </li>
-                <li><a href="#quienes-somos">Quiénes somos</a></li>
-                <li><a href="Contact.html">Contactenos</a></li>
-            </ul>
-        </nav>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-submenu">
+          <button class="submenu-toggle" aria-expanded="false">Servicios</button>
+          <ul class="submenu">
+            <li><a href="Audiovisual.html">Produccion audiovisual</a></li>
+            <li><a href="Fotografia.html">Fotografia</a></li>
+            <li><a href="Locucion.html">Locucion comercial</a></li>
+          </ul>
+        </li>
+        <li><a href="QuienesSomos.html">Quienes somos</a></li>
+        <li><a href="Contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero reveal">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Estudio creativo visual</p>
+        <h1>Fotografia y audiovisual con identidad premium</h1>
+        <p>Creamos imagenes, piezas audiovisuales y narrativas de marca para proyectos que quieren verse memorables.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="Contact.html">Solicitar propuesta</a>
+          <a class="btn btn-ghost" href="#portafolio">Ver portafolio</a>
+        </div>
+      </div>
     </section>
 
-    <!--Primera division con el 30% para el logo y la barra de navegacion-->
-    <section class="photo-title">
-        <div class="title1">
-           
-            <p class="frase">¡Tu! posees una gran historia, nosotros el talento para contarla</p>
-           <!-- <img src="/profile3.webp" class="img-profile" alt="photo-profile"> -->
-             <!-- <p>Imagen pendiente</p> -->
-        </div>
-        <div class="logo">
-            <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="logo">
-        </div>
-        <p id="texto">
-            Produccion_audiovisual y fotografia
-        </p>
-    </section>
-    
-    <!--Segunda division con el 30% para muestra dematerial fotografico mas relevante-->
-    <section class="gallery-container">
-        <div class="gallery-1">
-            
-            <h1>Nuestra galeria</h1>
-    
-        </div>
-        <div class="gallery-2">
-            <img src="IMG_principal/DSC07263_rtk.webp" alt="pets">
-            <img src="IMG_principal/BODA KATIE & JONATHAN-181_websize.webp" alt="boda">
-            <img src="IMG_principal/DSC07674_RTK.webp" alt="velas">
-            <img src="IMG_principal/DSC00870_rtk.webp" alt="restaurante">
-            <img src="IMG_principal/DSC04950_RTK.webp" alt="spa">
-            <!--Duplicamos las imaganes para crear un bucle infinito-->
-            <img src="IMG_principal/DSC07263_rtk.webp" alt="pets">
-            <img src="IMG_principal/BODA KATIE & JONATHAN-181_websize.webp" alt="boda">
-            <img src="IMG_principal/DSC07674_RTK.webp" alt="velas">
-            <img src="IMG_principal/DSC00870_rtk.webp" alt="restaurante">
-            <img src="IMG_principal/DSC04950_RTK.webp" alt="spa">
-        </div>
+    <section id="servicios" class="services reveal">
+      <div class="section-title">
+        <p>Servicios</p>
+        <h2>Soluciones visuales de alto impacto para marcas exigentes</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Produccion audiovisual</h3>
+          <p>Reels, videos corporativos, contenidos de lanzamiento y piezas narrativas para redes y campañas.</p>
+          <a href="Audiovisual.html">Explorar</a>
+        </article>
+        <article class="service-card">
+          <h3>Fotografia profesional</h3>
+          <p>Fotografia social, de producto, arquitectura y pets con direccion artistica y enfoque comercial.</p>
+          <a href="Fotografia.html">Explorar</a>
+        </article>
+        <article class="service-card">
+          <h3>Locucion comercial</h3>
+          <p>Voces para anuncios, videos de marca y piezas sonoras con tonos adaptados a tu audiencia.</p>
+          <a href="Locucion.html">Explorar</a>
+        </article>
+      </div>
     </section>
 
-
-    <!--Segunda division con el 30% para muestra dematerial fotografico mas relevante-->
-
-    <section class="description" id="quienes-somos">
-        <div class="equipo">
-            <h1>Nuestro equipo de trabajo</h1>
-            
-            <div class="ceo">
-                <h2>CEO y productor:</h2>
-                <p>Brian Rojas Rios</p>
-            </div>
-            
-            <div class="creativos">
-                <h2>Creativos y diseñador:</h2>
-                <p> Duvan Quiroga</p>
-                <p>Zarica Calderon</p>
-                <p>David Peñuela</p>
-            </div>
-
-            <div class="foto">
-                <h2>Fotografia:</h2>
-                <p>Diego Zambrano</p>
-                <p>Ronny Avila</p>
-            </div>
-            
-        </div>
-        <div class="parrafo">
-            <p>Imagina un lugar donde tus ideas se convierten en magia visual. En Briphotofilms, 
-                no solo capturamos imágenes; creamos experiencias que perduran. 
-                Somos los alquimistas de la producción audiovisual, 
-                los narradores de historias que dan vida a tus sueños. 
-                Con un equipo apasionado y lleno de talento, colaboramos contigo 
-                para destilar la esencia de tu visión y transformarla en algo extraordinario. 
-                ¿Listo para contar tu historia de una manera que nadie olvidará? Ven 
-                y descubre el poder de la creatividad sin límites.
-            </p>
-        </div>
-
-        <ul>
-            <li id="instagram">
-                <a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank">@briphotofilms
-                    <img src="IMG_principal/instagram.webp" alt="logo-instagram">
-                </a> 
-                
-            </li>
-            <li id="facebook">
-                <a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank">@briphotofilms
-                    <img src="IMG_principal/face.webp" alt="logo-facebook">
-                </a>
-            </li>
-            <li id="wapp">
-                <a href="https://wa.me/+573503742323" target="_blank">+573503742323
-                    <img src="IMG_principal/wapp.webp" alt="logo-wapp">
-                </a>                
-            </li>
-            <li id="email">
-                <a href="mailto:briPhothofilms@outlook.com" target="_blank">briPhothofilms@outlook.com
-                    <img src="IMG_principal/email.webp" alt="logo-email">
-                </a>                
-            </li>
-        </ul>
+    <section id="portafolio" class="portfolio reveal">
+      <div class="section-title dark">
+        <p>Portafolio</p>
+        <h2>Selecciones recientes</h2>
+      </div>
+      <div class="mosaic">
+        <img src="IMG_principal/DSC07263_rtk.webp" alt="Fotografia de mascota" loading="lazy" decoding="async">
+        <img src="IMG_principal/BODA KATIE & JONATHAN-181_websize.webp" alt="Fotografia social de boda" loading="lazy" decoding="async">
+        <img src="IMG_principal/DSC07674_RTK.webp" alt="Fotografia de producto" loading="lazy" decoding="async">
+        <img src="IMG_principal/DSC00870_rtk.webp" alt="Fotografia de restaurante" loading="lazy" decoding="async">
+        <img src="IMG_principal/DSC04950_RTK.webp" alt="Fotografia de spa" loading="lazy" decoding="async">
+      </div>
     </section>
+
+    <section class="about-preview reveal">
+      <div>
+        <p class="eyebrow">Quienes somos</p>
+        <h2>Un equipo creativo que transforma ideas en resultados visuales</h2>
+        <p>En BriPhotoFilms unimos direccion creativa, tecnica y sensibilidad narrativa para producir contenido visual que conecta con clientes y audiencias.</p>
+        <a class="btn btn-primary" href="QuienesSomos.html">Conocer al equipo</a>
+      </div>
+      <img src="IMG_principal/office.webp" alt="Equipo de trabajo BriPhotoFilms" loading="lazy" decoding="async">
+    </section>
+
+    <section class="contact-strip reveal">
+      <a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://wa.me/+573503742323" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      <a href="mailto:briPhothofilms@outlook.com">Correo</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
+    <p>Universitaria Agustiniana | Tecnologia en desarrollo de software</p>
+  </footer>
+
+  <script src="scripmenu.js"></script>
 </body>
-<footer>
-     <!--En el footer tenemos la informacion de contacto-->
-
-     <div class="footer">
-        <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban León - Wilson Andres Carmona</p>
-    <section id="Contacto">
-            <p>carlos.cruzr@uniagustiniana.edu.co</p>
-    </section>
-        <p>Universitaria Agustiniana</p>
-        <p>Tecnologia en desarrollo de software</p>           
-</footer>
 </html>

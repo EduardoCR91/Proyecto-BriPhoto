@@ -1,142 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
-    <link rel="stylesheet" href="cssContacto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | BriPhotoFilms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssHome.css">
 </head>
 <body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Ir al inicio"><img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="Logo BriPhotoFilms"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-submenu"><button class="submenu-toggle" aria-expanded="false">Servicios</button><ul class="submenu"><li><a href="Audiovisual.html">Produccion audiovisual</a></li><li><a href="Fotografia.html">Fotografia</a></li><li><a href="Locucion.html">Locucion comercial</a></li></ul></li>
+        <li><a href="QuienesSomos.html">Quienes somos</a></li>
+        <li><a href="Contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!--Barra de navegacion general para todas las paginas-->
-
-    <section class="barra-nav">
-        <nav class="menu">
-            <ul>
-                <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="logo">
-                <li><a href="index.html" id="servicios">Servicios</a>
-                    <ul class="submenu">
-                        <li><a href="Audiovisual.html">Producción audiovisual</a></li>
-                        <li><a href="Fotografia.html">Fotografia</a></li>
-                        <li><a href="Locucion.html">Locucion comercial</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html">Quiénes somos</a></li>
-                <li><a href="Contact.html">Contactenos</a></li>
-            </ul>
-        </nav>
+  <main>
+    <section class="services reveal">
+      <div class="section-title"><p>Contacto</p><h1>Cuentanos tu proyecto y construimos una propuesta a medida</h1></div>
+      <div class="service-grid">
+        <article class="service-card" style="grid-column:span 2;">
+          <h3>Ponte en contacto</h3>
+          <form action="procesar_formulario.php" method="POST" id="contactForm" style="display:grid;gap:.65rem;">
+            <label for="name">Nombre</label><input type="text" id="name" name="nombre" required>
+            <label for="email">Email</label><input type="email" id="email" name="correo" required>
+            <label for="subject">Asunto</label><input type="text" id="subject" name="asunto" required>
+            <label for="message">Mensaje</label><textarea id="message" name="mensaje" rows="5" required></textarea>
+            <button type="submit" id="btn-message" class="btn btn-primary" style="border:0;cursor:pointer;">Enviar ahora</button>
+          </form>
+          <p id="feedback" style="display:none;color:#2d7e31;font-weight:700;">Tu mensaje ha sido enviado correctamente.</p>
+        </article>
+        <article class="service-card">
+          <h3>Canales directos</h3>
+          <p><a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+          <p><a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+          <p><a href="https://wa.me/+573503742323" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+          <p><a href="mailto:briPhothofilms@outlook.com">briPhothofilms@outlook.com</a></p>
+        </article>
+      </div>
     </section>
+  </main>
 
-    <section class="first">
-        <h1>Contactanos</h1>
-        <p>Cada miembro de nuestro equipo es una pieza clave de un 
-            rompecabezas creativo, y juntos, creamos obras que no solo se ven, 
-            sino que se sienten. ¡Estamos listos para acompañarte en esta emocionante 
-            travesía!</p>
-    </section>
+  <footer class="footer">
+    <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
+    <p>Universitaria Agustiniana | Tecnologia en desarrollo de software</p>
+  </footer>
 
-    <section class="middle">
-        <div class="form">
-            
-            <h1>Ponte en contacto</h1>
-            <form action="procesar_formulario.php" method="POST" id="contactForm">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" required>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="correo" placeholder="Correo electronico" required>
-                <label for="subject">Asunto</label>
-                <input type="text" id="subject" name="asunto" placeholder="Asunto del mensaje" required>
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
-                <button type="submit" id="btn-message" >Enviar ahora</button>
-            </form>
-            <p id="feedback">¡Tu mensaje ha sido enviado correctamente!</p>
-        </div>
-
-        <div class="text-logos">
-
-            <div class="texto-creativo">
-                <h1>Conoce a Nuestro Equipo Soñado</h1>
-
-                <p>
-                    En Briphotofilms, no solo somos un equipo; somos una familia de soñadores, 
-                    creadores y narradores. Cada miembro aporta su chispa única, 
-                    formando un mosaico de talento que transforma ideas en realidades visuales 
-                    deslumbrantes.
-                    
-                </p>
-            </div>
-    
-            <ul>
-                <li id="instagram">
-                    <a href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank">@briphotofilms 
-                        <img src="IMG_principal/instagram.webp" alt="logo-instagram">
-                    </a> 
-                    
-                </li>
-                <li id="facebook">
-                    <a href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank">@briphotofilms
-                        <img src="IMG_principal/face.webp" alt="logo-facebook">
-                    </a>
-                </li>
-                <li id="wapp">
-                    <a href="https://wa.me/+573503742323" target="_blank">+573503742323
-                        <img src="IMG_principal/wapp.webp" alt="logo-wapp">
-                    </a>                
-                </li>
-                <li id="email">
-                    <a href="mailto:briPhothofilms@outlook.com" target="_blank">briPhothofilms@outlook.com
-                        <img src="IMG_principal/email.webp" alt="logo-email">
-                    </a>                
-                </li>
-            </ul>
-    
-        </div>
-
-    </section>
-
-    <script src="script.js" type="module"></script>
-
+  <script src="scripmenu.js"></script>
+  <script src="script.js" type="module"></script>
 </body>
-<!--
-<script>
-    document.getElementById('btn-message').addEventListener('click', function () {
-    // Obtener los valores de los campos
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    // Validar que los campos no estén vacíos
-    if (name === '' || email === '' || subject === '' || message === '') {
-        alert('Por favor, completa todos los campos antes de enviar.');
-        return;
-    }
-
-    // Mostrar mensaje de confirmación
-    const feedback = document.getElementById('feedback');
-    feedback.style.display = 'block';
-
-    // Limpiar el formulario
-    document.getElementById('contactForm').reset();
-
-    // Ocultar el mensaje después de 5 segundos
-    setTimeout(() => {
-        feedback.style.display = 'none';
-    }, 5000);
-});
-</script>
--->
-<footer>
-    <!--En el footer tenemos la informacion de contacto-->
-
-   <div class="footer">
-               <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban León - Wilson Andres Carmona</p>
-           <section id="Contacto">
-                   <p>carlos.cruzr@uniagustiniana.edu.co</p>
-           </section>
-               <p>Universitaria Agustiniana</p>
-               <p>Tecnologia en desarrollo de software</p>
-   </div>            
-</footer>
 </html>

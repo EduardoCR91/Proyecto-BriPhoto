@@ -1,111 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producción Audiovisual</title>
-    <link rel="stylesheet" href="Produccion_audiovisual/cssAudiovisual.css">
-    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
-    <script src="https://kit.fontawesome.com/7521f10d95.js" crossorigin="anonymous"></script>
-    <!--Este link de abajo es para conectar el script que permite que funcione el submenu desplegable en moviles-->
-    <script src="scripmenu.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produccion Audiovisual | BriPhotoFilms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cssHome.css">
 </head>
 <body>
-<!-- menu navegacion-->
-<section class="barra-nav"> 
-    <nav class="menu">
-        <ul>
-            <img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="logo">
-            <li><a href="" id="servicios">Servicios</a>
-                <ul class="submenu">
-                    <li><a href="Audiovisual.html">Produccion_audiovisual</a></li>
-                    <li><a href="Fotografia.html">Fotografia</a></li>
-                    <li><a href="Locucion.html">Locucion comercial</a></li>
-                </ul>
-            </li>
-            <li><a href="index.html">Quiénes somos</a></li>
-            <li><a href="Contact.html">Contactenos</a></li>
-        </ul>
+  <header class="site-header">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="index.html" aria-label="Ir al inicio"><img src="IMG_principal/LOGO_BLANCO_BRI.webp" alt="Logo BriPhotoFilms"></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li class="has-submenu">
+          <button class="submenu-toggle" aria-expanded="false">Servicios</button>
+          <ul class="submenu">
+            <li><a href="Audiovisual.html">Produccion audiovisual</a></li>
+            <li><a href="Fotografia.html">Fotografia</a></li>
+            <li><a href="Locucion.html">Locucion comercial</a></li>
+          </ul>
+        </li>
+        <li><a href="QuienesSomos.html">Quienes somos</a></li>
+        <li><a href="Contact.html">Contacto</a></li>
+      </ul>
     </nav>
-</section>
-    <!--Cuerpo pagina-->
-    <!--Empresarial-->
-    <div class="fondoComercial">
-        <div class="TituloComercial">
-            <h2>Audiovisual Empresarial</h2>
-        </div>
-        <section class="Empresarial_1">
-            <!-- Iframe de YouTube con parámetros optimizados -->
-            <div id="ContenedorCarrusel">
-                <div class="carruceles" id="deslisador">
-                    <section class="Slider">
-                        <video src="Produccion_audiovisual/vid/corporativa/LIBROALAIRE CHRIS CARPENTIER.webm" controls></video>
-                    </section>
-                    <section class="Slider">
-                        <!-- Parámetros adicionales para controlar la interfaz de YouTube -->
-                        <iframe 
-                            src="https://www.youtube.com/embed/8qeDy4Lsu64?si=-qlQENUtiLwna1WQ&controls=0&rel=0&showinfo=0&modestbranding=1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
-                    </section>
-                </div>
-                <!-- Áreas de protección para los botones -->
-                <div class="boton-area area-izq"></div>
-                <div class="boton-area area-der"></div>
-                <!-- Botones de navegación -->
-                <div class="boton_izq"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="boton_der"><i class="fa-solid fa-chevron-right"></i></div>
-            </div>
-            <article class="DescripcionEmpresarial">
-                <p>Cada proyecto es una aventura única, y en Briphotofilms, estamos listos para emprenderla contigo. Desde la chispa inicial de la preproducción hasta el pulido final de la postproducción, nuestro equipo está equipado con tecnología de vanguardia y un enfoque artístico que convierte cada fotograma en una obra maestra. </p>
-            </article>
-        </section>
-        <section class="Empresarial_2">
-                <h2>Quienes han confiado en nosotros</h2>
-                <div class="ContenedorMarcas">
-                    <div class="marcas">
-                        <img src="Produccion_audiovisual/img/Assa Abloy.jpeg" alt="Assa Abloy colombia">
-                        <h4>Assa Abloy</h4>
-                    </div>
-                    <div class="marcas">
-                        <img src="Produccion_audiovisual/img/logos-diversion-salitre-magico.jpg" alt="Salitre Magico">
-                        <h4>Salitre Magico</h4>
-                    </div>
-                    <div class="marcas">
-                        <img src="Produccion_audiovisual/img/Libro al aire.jpg" alt="Potcast Libro al aire">
-                        <h4>Libro Al Aire</h4>
-                    </div>
-                </div>
-        </section>
-    </div>
-    <!--Social-->
-<div class="FondoSocial">
-    
-    <div class="TituloSocial">
-        <h2>Audiovisual Social</h2>
-    </div>
-    <section class="Social_1">
-        <article class="DescripcionSocial">
-            <p>Ya sea un anuncio que deslumbra, un cortometraje que emociona o un video corporativo que impacta, dejamos que nuestra pasión por el cine y nuestra experiencia hablen por ti. ¿Estás listo para hacer que tu mensaje brille?</p>
-        </article>
-        <!--video social-->
-        <section class="Video_social">
-            <video src="Produccion_audiovisual/vid/social/Reel Jennifer & Juan Pablo.webm" controls></video>
-        </section>
+  </header>
+
+  <main>
+    <section class="services reveal">
+      <div class="section-title">
+        <p>Audiovisual</p>
+        <h1>Producciones audiovisuales que posicionan tu marca</h1>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><h3>Preproduccion</h3><p>Concepto creativo, guion y planeacion visual.</p></article>
+        <article class="service-card"><h3>Rodaje</h3><p>Direccion, captura y ritmo narrativo orientado a marca.</p></article>
+        <article class="service-card"><h3>Postproduccion</h3><p>Edicion, color y master final para redes y campañas.</p></article>
+      </div>
     </section>
-</div>
-    <footer>
-        <!--En el footer tenemos la informacion de contacto-->
-        <div class="footer">
-            <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban León - Wilson Andres Carmona</p>
-        <section id="Contacto">
-                <p>carlos.cruzr@uniagustiniana.edu.co</p>
-        </section>
-            <p>Universitaria Agustiniana</p>
-            <p>Tecnologia en desarrollo de software</p>
-        </div>              
-   </footer>
-   <script src="Produccion_audiovisual/JavaScript.js"></script>
+
+    <section class="portfolio reveal">
+      <div class="section-title dark"><p>Showreel</p><h2>Empresarial y social</h2></div>
+      <div class="mosaic">
+        <video controls preload="metadata" style="width:100%;border-radius:14px;grid-column:span 6;min-height:280px;object-fit:cover;"><source src="Produccion_audiovisual/vid/corporativa/LIBROALAIRE CHRIS CARPENTIER.webm" type="video/webm"></video>
+        <iframe loading="lazy" style="width:100%;border-radius:14px;grid-column:span 6;min-height:280px;border:0;" src="https://www.youtube.com/embed/8qeDy4Lsu64?controls=0&rel=0&modestbranding=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video audiovisual"></iframe>
+      </div>
+    </section>
+
+    <section class="services reveal">
+      <div class="section-title"><p>Clientes</p><h2>Clientes y aliados que respaldan nuestro trabajo</h2></div>
+      <div class="service-grid">
+        <article class="service-card"><img src="Produccion_audiovisual/img/Assa Abloy.jpeg" alt="Assa Abloy" loading="lazy" decoding="async"><h3>Assa Abloy</h3></article>
+        <article class="service-card"><img src="Produccion_audiovisual/img/logos-diversion-salitre-magico.jpg" alt="Salitre Magico" loading="lazy" decoding="async"><h3>Salitre Magico</h3></article>
+        <article class="service-card"><img src="Produccion_audiovisual/img/Libro al aire.jpg" alt="Libro al Aire" loading="lazy" decoding="async"><h3>Libro Al Aire</h3></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desarrollado por Carlos Eduardo Cruz - Juan Esteban Leon - Wilson Andres Carmona</p>
+    <p>Universitaria Agustiniana | Tecnologia en desarrollo de software</p>
+  </footer>
+
+  <script src="scripmenu.js"></script>
 </body>
 </html>
