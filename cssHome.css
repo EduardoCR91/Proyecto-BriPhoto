@@ -599,22 +599,39 @@ h2 {
   }
 
   .mosaic {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .photo-mosaic {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .photo-mosaic .photo-trigger:nth-child(n) {
-    grid-column: span 1;
-    height: 210px;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
   }
 
   .mosaic img,
   .mosaic img:nth-child(n) {
     grid-column: span 1;
-    height: 210px;
+    height: 240px;
+  }
+
+  .photo-mosaic {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .photo-mosaic .photo-trigger:nth-child(n) {
+    grid-column: span 1;
+    height: 240px;
+  }
+
+  .audiovisual-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .video-trigger {
+    min-height: 220px;
+  }
+
+  .video-trigger span {
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
+    text-align: center;
   }
 
   .about-preview {
