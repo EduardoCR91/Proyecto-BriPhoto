@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Manrope:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply m-0 bg-bg text-ink font-body;
+    background: radial-gradient(circle at top right, #fef9ed 0%, #f6f4ef 45%, #f2f0eb 100%);
+  }
+}
+
+@layer components {
+  .section-wrap { @apply mx-auto max-w-6xl px-4; }
+  .section-eyebrow { @apply uppercase tracking-[0.16em] text-xs text-accent mb-1; }
+  .section-title { @apply font-display text-4xl md:text-5xl leading-tight mb-3; }
+  .card { @apply rounded-2xl border border-[#e7e2d8] bg-paper p-5 shadow-soft; }
+  .btn { @apply inline-block rounded-full px-5 py-3 text-sm font-semibold no-underline; }
+  .btn-primary { @apply bg-accent text-[#131313]; }
+  .btn-ghost { @apply border border-white/60 text-white; }
+  .reveal { @apply opacity-0 translate-y-7 transition duration-700; }
+  .reveal.show { @apply opacity-100 translate-y-0; }
+}
