@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
 const links = [
-  ['/', 'Inicio'],
   ['/audiovisual', 'Produccion audiovisual'],
   ['/fotografia', 'Fotografia'],
   ['/locucion', 'Locucion comercial'],
@@ -15,9 +14,13 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1116]/85 backdrop-blur-md">
-      <nav className="section-wrap flex items-center justify-between gap-4 py-3">
-        <Link to="/" className="shrink-0" aria-label="Ir al inicio">
-          <img src="/IMG_principal/LOGO_BLANCO_BRI.webp" alt="BriPhotoFilms" className="h-auto w-20" />
+      <nav className="section-wrap flex items-center justify-between gap-4 py-2">
+        <Link to="/" className="shrink-0 overflow-visible" aria-label="Ir al inicio">
+          <img
+            src="/IMG_principal/LOGO_BLANCO_BRI.webp"
+            alt="BriPhotoFilms"
+            className="h-16 w-auto origin-left scale-[2] object-contain md:h-20 md:scale-[2.5]"
+          />
         </Link>
 
         <button
