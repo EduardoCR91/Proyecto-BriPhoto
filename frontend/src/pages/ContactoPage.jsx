@@ -12,7 +12,8 @@ export default function ContactoPage() {
 
   const submit = async (event) => {
     event.preventDefault()
-    const form = new FormData(event.currentTarget)
+    const formElement = event.currentTarget
+    const form = new FormData(formElement)
     const payload = {
       'form-name': 'contacto',
       nombre: (form.get('nombre') || '').toString().trim(),
@@ -32,7 +33,7 @@ export default function ContactoPage() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(payload),
       })
-      event.currentTarget.reset()
+      formElement.reset()
       setOk(true)
       setTimeout(() => setOk(false), 5000)
     } catch (err) {
