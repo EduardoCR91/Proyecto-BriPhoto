@@ -83,7 +83,7 @@ export default function ContactoPage() {
               <a className="rounded-xl border border-[#e8c47e4d] bg-white/5 px-4 py-3 font-semibold text-[#f0d39b] no-underline" href="https://www.instagram.com/briphotofilms?igsh=MWNwODBlb3hjbmhrMQ==" target="_blank" rel="noreferrer">Instagram</a>
               <a className="rounded-xl border border-[#e8c47e4d] bg-white/5 px-4 py-3 font-semibold text-[#f0d39b] no-underline" href="https://www.facebook.com/bri.rojasrios?mibextid=LQQJ4d" target="_blank" rel="noreferrer">Facebook</a>
               <a className="rounded-xl border border-[#e8c47e4d] bg-white/5 px-4 py-3 font-semibold text-[#f0d39b] no-underline" href="https://wa.me/+573503742323" target="_blank" rel="noreferrer">WhatsApp</a>
-              <a className="rounded-xl border border-[#e8c47e4d] bg-white/5 px-4 py-3 font-semibold text-[#f0d39b] no-underline" href="mailto:briPhothofilms@outlook.com">briPhothofilms@outlook.com</a>
+              {/*<a className="rounded-xl border border-[#e8c47e4d] bg-white/5 px-4 py-3 font-semibold text-[#f0d39b] no-underline" href="mailto:briPhothofilms@outlook.com">briPhothofilms@outlook.com</a>*/}
             </article>
           </div>
         </div>
