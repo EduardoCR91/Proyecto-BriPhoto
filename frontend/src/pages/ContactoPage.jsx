@@ -13,6 +13,9 @@ export default function ContactoPage() {
   const submit = async (event) => {
     event.preventDefault()
     const formElement = event.currentTarget
+    if (!(formElement instanceof HTMLFormElement)) {
+      throw new Error('Formulario no disponible.')
+    }
     const form = new FormData(formElement)
     const payload = {
       'form-name': 'contacto',
@@ -33,7 +36,7 @@ export default function ContactoPage() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(payload),
       })
-      formElement.reset()
+      formElement?.reset?.()
       setOk(true)
       setTimeout(() => setOk(false), 5000)
     } catch (err) {
