@@ -19,7 +19,7 @@ export default function Navbar() {
           <img
             src="/IMG_principal/LOGO_BLANCO_BRI.webp"
             alt="BriPhotoFilms"
-            className="h-16 w-auto origin-left scale-[2] object-contain md:h-20 md:scale-[2.5]"
+            className="h-16 w-auto origin-left scale-[2.7] object-contain md:h-20 md:scale-[3]"
           />
         </Link>
 
