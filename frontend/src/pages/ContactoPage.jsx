@@ -1,7 +1,9 @@
 import { useState } from 'react'
-import { addDoc, collection } from 'firebase/firestore'
-import { db } from '../lib/firebase'
 import { useReveal } from '../hooks/useReveal'
+
+function encode(data) {
+  return new URLSearchParams(data).toString()
+}
 
 export default function ContactoPage() {
   useReveal()
@@ -12,11 +14,12 @@ export default function ContactoPage() {
     event.preventDefault()
     const form = new FormData(event.currentTarget)
     const payload = {
+      'form-name': 'contacto',
       nombre: (form.get('nombre') || '').toString().trim(),
       correo: (form.get('correo') || '').toString().trim(),
       asunto: (form.get('asunto') || '').toString().trim(),
       mensaje: (form.get('mensaje') || '').toString().trim(),
-      fecha: new Date(),
+      'bot-field': '',
     }
 
     if (!payload.nombre || !payload.correo || !payload.asunto || !payload.mensaje) return
@@ -24,7 +27,11 @@ export default function ContactoPage() {
     try {
       setSending(true)
       setOk(false)
-      await addDoc(collection(db, 'mensajes'), payload)
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(payload),
+      })
       event.currentTarget.reset()
       setOk(true)
       setTimeout(() => setOk(false), 5000)
@@ -44,7 +51,16 @@ export default function ContactoPage() {
           <div className="grid items-start gap-5 md:grid-cols-[1.5fr_1fr]">
             <article className="card p-6">
               <h3 className="mb-3 font-display text-3xl">Ponte en contacto</h3>
-              <form onSubmit={submit} className="grid gap-3">
+              <form
+                name="contacto"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={submit}
+                className="grid gap-3"
+              >
+                <input type="hidden" name="form-name" value="contacto" />
+                <input type="hidden" name="bot-field" />
                 <label className="text-sm font-semibold">Nombre</label>
                 <input name="nombre" required className="rounded-xl border border-[#dfd8c8] bg-[#fffdf8] px-4 py-3" />
                 <label className="text-sm font-semibold">Email</label>
